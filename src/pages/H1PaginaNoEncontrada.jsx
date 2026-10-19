@@ -1,0 +1,21 @@
+import Boton from "../estilo/Boton";
+import TituloPagina from "../estilo/TituloPagina";
+import PublicoLayout from "../components/PublicoLayout";
+
+export default function H1PaginaNoEncontrada() {
+  return (
+    <PublicoLayout pagina="">
+      <div className="mx-auto max-w-xl py-16 text-center">
+        <p className="mb-4 text-7xl font-semibold text-primary">404</p>
+        <TituloPagina
+          titulo="No encontramos esta página"
+          descripcion="El enlace puede haber cambiado. Si buscabas un ticket, ingresa su código en el buscador de la cabecera."
+        ></TituloPagina>
+        <div className="acciones">
+          <Boton variante="primario">Ir al inicio</Boton>
+          <Boton variante="secundario">Buscar un ticket</Boton>
+        </div>
+      </div>
+    </PublicoLayout>
+  );
+}

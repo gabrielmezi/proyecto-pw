@@ -1,0 +1,37 @@
+import Boton from "../estilo/Boton";
+import AreaTexto from "../estilo/AreaTexto";
+import Etiqueta from "../estilo/Etiqueta";
+import Aviso from "../estilo/Aviso";
+import Tarjeta from "../estilo/Tarjeta";
+import Modal from "../estilo/Modal";
+import Metrica from "../estilo/Metrica";
+
+export default function H5CerrarTicket() {
+  return (
+    <Modal titulo="Cerrar TCK-2026-00147">
+      <AreaTexto
+        titulo="SOLUCIÓN APLICADA (OBLIGATORIA)"
+        valor="Se reemplazó el extensor HDBaseT del rack del piso 2 y se verificó la proyección con dos laptops distintas."
+        ayuda=""
+      />
+      <div className="formulario">
+        <Metrica
+          titulo="TIEMPO TOTAL DE ATENCIÓN"
+          valor="3 h 24 min"
+          detalle="Dentro del tiempo esperado (8 h)"
+        />
+        <Tarjeta titulo="ESTADO FINAL">
+          <Etiqueta tono="success">Cerrado</Etiqueta>
+        </Tarjeta>
+      </div>
+      <Aviso tono="info">
+        Al cerrar, Camila Quispe Ramos recibirá la encuesta de satisfacción y
+        podrá reabrir el ticket dentro de 7 días.
+      </Aviso>
+      <div className="acciones">
+        <Boton variante="secundario">Cancelar</Boton>
+        <Boton variante="primario">Cerrar ticket</Boton>
+      </div>
+    </Modal>
+  );
+}
