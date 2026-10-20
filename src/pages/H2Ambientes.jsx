@@ -1,139 +1,165 @@
-import Boton from "../estilo/Boton";
-import Campo from "../estilo/Campo";
-import Selector from "../estilo/Selector";
-import Tabla from "../estilo/Tabla";
-import TituloPagina from "../estilo/TituloPagina";
-import Paginacion from "../estilo/Paginacion";
-import SupervisorLayout from "../components/SupervisorLayout";
+import SupervisorLayout from "../components/SupervisorLayout"
 
 export default function H2Ambientes() {
-  return (
-    <SupervisorLayout pagina="ambientes">
-      <TituloPagina
-        titulo="Sedes y ambientes"
-        descripcion="48 ambientes registrados en el Campus Monterrico."
-      >
-        <Boton variante="primario">Nuevo ambiente</Boton>
-      </TituloPagina>
-      <div className="mb-4 flex flex-wrap items-center gap-3">
-        <Campo titulo="BUSCAR POR CÓDIGO O NOMBRE" valor="" ayuda="" />
-        <Selector titulo="SEDE">
-          <option>Monterrico</option>
-        </Selector>
-        <Selector titulo="PABELLÓN">
-          <option>Todos</option>
-          <option>A</option>
-          <option>H</option>
-          <option>E</option>
-        </Selector>
-        <Boton variante="secundario">Tipo: aula ×</Boton>
-      </div>
-      <Tabla titulo="Listado">
-        <thead>
-          <tr>
-            <th scope="col">CÓDIGO</th>
-            <th scope="col">TIPO DE AMBIENTE</th>
-            <th scope="col">PABELLÓN</th>
-            <th scope="col">PISO</th>
-            <th scope="col">SEDE</th>
-            <th scope="col">CAPACIDAD</th>
-            <th scope="col">TICKETS ABIERTOS</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>A-201</td>
-            <td>Aula</td>
-            <td>A</td>
-            <td>2</td>
-            <td>Campus Monterrico</td>
-            <td>68</td>
-            <td>2</td>
-          </tr>
-          <tr>
-            <td>A-305</td>
-            <td>Aula</td>
-            <td>A</td>
-            <td>3</td>
-            <td>Campus Monterrico</td>
-            <td>54</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>E-304</td>
-            <td>Aula magna</td>
-            <td>E</td>
-            <td>3</td>
-            <td>Campus Monterrico</td>
-            <td>120</td>
-            <td>3</td>
-          </tr>
-          <tr>
-            <td>H-105</td>
-            <td>Laboratorio de cómputo</td>
-            <td>H</td>
-            <td>1</td>
-            <td>Campus Monterrico</td>
-            <td>32</td>
-            <td>1</td>
-          </tr>
-          <tr>
-            <td>H-210</td>
-            <td>Laboratorio de Redes</td>
-            <td>H</td>
-            <td>2</td>
-            <td>Campus Monterrico</td>
-            <td>28</td>
-            <td>4</td>
-          </tr>
-          <tr>
-            <td>N-402</td>
-            <td>Aula</td>
-            <td>N</td>
-            <td>4</td>
-            <td>Campus Monterrico</td>
-            <td>48</td>
-            <td>2</td>
-          </tr>
-          <tr>
-            <td>Q-101</td>
-            <td>Auditorio</td>
-            <td>Q</td>
-            <td>1</td>
-            <td>Campus Monterrico</td>
-            <td>180</td>
-            <td>2</td>
-          </tr>
-          <tr>
-            <td>BIB-P2</td>
-            <td>Biblioteca piso 2</td>
-            <td>Biblioteca</td>
-            <td>2</td>
-            <td>Campus Monterrico</td>
-            <td>210</td>
-            <td>1</td>
-          </tr>
-          <tr>
-            <td>AUD-CEN</td>
-            <td>Auditorio Central</td>
-            <td>Central</td>
-            <td>1</td>
-            <td>Campus Monterrico</td>
-            <td>420</td>
-            <td>1</td>
-          </tr>
-          <tr>
-            <td>L-108</td>
-            <td>Laboratorio de Física</td>
-            <td>L</td>
-            <td>1</td>
-            <td>Campus Monterrico</td>
-            <td>30</td>
-            <td>0</td>
-          </tr>
-        </tbody>
-      </Tabla>
-      <Paginacion>Mostrando 1–10 de 48 ambientes</Paginacion>
-    </SupervisorLayout>
-  );
+    return (
+        <SupervisorLayout pagina="ambientes">
+            <div>
+                <p className="text-2xl font-bold">Sedes y ambientes</p>
+                <div className="flex items-center">
+                    <p className="text-sm text-gray-500">48 ambientes registrados en el Campus Monterrico</p>
+                    <button
+                        className="text-sm  ml-[630px] text-white bg-[#163A5A] rounded-md shadow-md py-2 w-[150px] border border-[#3B6FA8] hover:bg-blue-200 hover:text-black" id="NuevoAmbiente" type="button">Nuevo ambiente</button>
+                </div>
+
+                <div className="mt-2 flex items-center">
+                    <input className="bg-white text-gray-500 border border-gray-300 rounded-md text-sm shadow-sm p-2 w-[250px]"
+                        type="text" placeholder="Buscar por código o nombre" id="Buscar" />
+                    <select
+                        className="ml-2 bg-white text-gray-500 border border-gray-300 rounded-md text-sm shadow-sm p-2 w-[150px]">
+                        <option value="Sede">Sede: </option>
+                    </select>
+
+                    <select
+                        className="ml-2 bg-white text-gray-500 border border-gray-300 rounded-md text-sm shadow-sm p-2 w-[150px]">
+                        <option value="Pabellón">Pabellón: </option>
+                    </select>
+
+                    <button
+                        className="ml-2 text-[#163A5A] bg-[#E7EFF6] border border-[#163A5A] rounded-md shadow-md p-[5px] w-[100px]"
+                        id="Tipo" type="button">Tipo: </button>
+                </div>
+
+                <div className="mt-4 bg-white rounded-md border border-gray-200 w-[1100px]">
+
+                    <div className="flex items-center p-3 border-b border-gray-200 text-xs text-gray-500 font-bold bg-[#F8FAFC]">
+                        <p className="w-[120px]">CÓDIGO</p>
+                        <p className="w-[200px]">TIPO DE AMBIENTE</p>
+                        <p className="w-[120px]">PABELLÓN</p>
+                        <p className="w-[80px]">PISO</p>
+                        <p className="w-[180px]">SEDE</p>
+                        <p className="w-[120px]">CAPACIDAD</p>
+                        <p className="w-[150px]">TICKETS ABIERTOS</p>
+                    </div>
+
+                    <div className="text-sm">
+
+                        <div className="flex items-center p-3">
+                            <p className="w-[120px] font-bold text-[#163A5A]">A-201</p>
+                            <p className="w-[200px]">Aula</p>
+                            <p className="w-[120px]">A</p>
+                            <p className="w-[80px]">2</p>
+                            <p className="w-[180px] text-gray-600">Campus Monterrico</p>
+                            <p className="w-[120px] font-bold">68</p>
+                            <p className="w-[150px]">2</p>
+                        </div>
+
+                        <div className="flex items-center p-3">
+                            <p className="w-[120px] font-bold text-[#163A5A]">A-305</p>
+                            <p className="w-[200px]">Aula</p>
+                            <p className="w-[120px]">A</p>
+                            <p className="w-[80px]">3</p>
+                            <p className="w-[180px] text-gray-600">Campus Monterrico</p>
+                            <p className="w-[120px] font-bold">54</p>
+                            <p className="w-[150px]">0</p>
+                        </div>
+
+                        <div className="flex items-center p-3">
+                            <p className="w-[120px] font-bold text-[#163A5A]">E-304</p>
+                            <p className="w-[200px]">Aula magna</p>
+                            <p className="w-[120px]">E</p>
+                            <p className="w-[80px]">3</p>
+                            <p className="w-[180px] text-gray-600">Campus Monterrico</p>
+                            <p className="w-[120px] font-bold">120</p>
+                            <p className="w-[150px]">3</p>
+                        </div>
+
+                        <div className="flex items-center p-3">
+                            <p className="w-[120px] font-bold text-[#163A5A]">H-105</p>
+                            <p className="w-[200px]">Laboratorio de cómputo</p>
+                            <p className="w-[120px]">H</p>
+                            <p className="w-[80px]">1</p>
+                            <p className="w-[180px] text-gray-600">Campus Monterrico</p>
+                            <p className="w-[120px] font-bold">32</p>
+                            <p className="w-[150px]">1</p>
+                        </div>
+
+                        <div className="flex items-center p-3">
+                            <p className="w-[120px] font-bold text-[#163A5A]">H-210</p>
+                            <p className="w-[200px]">Laboratorio de Redes</p>
+                            <p className="w-[120px]">H</p>
+                            <p className="w-[80px]">2</p>
+                            <p className="w-[180px] text-gray-600">Campus Monterrico</p>
+                            <p className="w-[120px] font-bold">28</p>
+                            <p className="w-[150px]">4</p>
+                        </div>
+
+                        <div className="flex items-center p-3">
+                            <p className="w-[120px] font-bold text-[#163A5A]">N-402</p>
+                            <p className="w-[200px]">Aula</p>
+                            <p className="w-[120px]">N</p>
+                            <p className="w-[80px]">4</p>
+                            <p className="w-[180px] text-gray-600">Campus Monterrico</p>
+                            <p className="w-[120px] font-bold">48</p>
+                            <p className="w-[150px]">2</p>
+                        </div>
+
+                        <div className="flex items-center p-3">
+                            <p className="w-[120px] font-bold text-[#163A5A]">Q-101</p>
+                            <p className="w-[200px]">Auditorio</p>
+                            <p className="w-[120px]">Q</p>
+                            <p className="w-[80px]">1</p>
+                            <p className="w-[180px] text-gray-600">Campus Monterrico</p>
+                            <p className="w-[120px] font-bold">180</p>
+                            <p className="w-[150px]">2</p>
+                        </div>
+
+                        <div className="flex items-center p-3">
+                            <p className="w-[120px] font-bold text-[#163A5A]">BIB-P2</p>
+                            <p className="w-[200px]">Biblioteca piso 2</p>
+                            <p className="w-[120px]">Biblioteca</p>
+                            <p className="w-[80px]">2</p>
+                            <p className="w-[180px] text-gray-600">Campus Monterrico</p>
+                            <p className="w-[120px] font-bold">210</p>
+                            <p className="w-[150px]">1</p>
+                        </div>
+
+                        <div className="flex items-center p-3">
+                            <p className="w-[120px] font-bold text-[#163A5A]">AUD-CEN</p>
+                            <p className="w-[200px]">Auditorio Central</p>
+                            <p className="w-[120px]">Central</p>
+                            <p className="w-[80px]">1</p>
+                            <p className="w-[180px] text-gray-600">Campus Monterrico</p>
+                            <p className="w-[120px] font-bold">420</p>
+                            <p className="w-[150px]">1</p>
+                        </div>
+
+                        <div className="flex items-center p-3">
+                            <p className="w-[120px] font-bold text-[#163A5A]">L-108</p>
+                            <p className="w-[200px]">Laboratorio de Física</p>
+                            <p className="w-[120px]">L</p>
+                            <p className="w-[80px]">1</p>
+                            <p className="w-[180px] text-gray-600">Campus Monterrico</p>
+                            <p className="w-[120px] font-bold">30</p>
+                            <p className="w-[150px]">0</p>
+                        </div>
+                    </div>
+
+                    <div className="flex items-center p-3 border-t border-gray-200">
+                        <p className="text-xs text-gray-500">Mostrando 1-10 de 48 ambientes</p>
+
+                        <div className="ml-[530px] flex items-center">
+                            <button className="px-3 py-1 text-xs border border-gray-300 rounded bg-white text-gray-500">Anterior</button>
+                            <button className="ml-2 px-3 py-1 text-xs border border-[#163A5A] bg-[#163A5A] text-white rounded">1</button>
+                            <button className="ml-2 px-3 py-1 text-xs border border-gray-300 rounded bg-white text-gray-500">2</button>
+                            <button className="ml-2 px-3 py-1 text-xs border border-gray-300 rounded bg-white text-gray-500">3</button>
+                            <button className="ml-2 px-3 py-1 text-xs border border-gray-300 rounded bg-white text-gray-500">4</button>
+                            <button className="ml-2 px-3 py-1 text-xs border border-gray-300 rounded bg-white text-gray-500">5</button>
+                            <button
+                                className="ml-2 px-3 py-1 text-xs border border-gray-300 rounded bg-white text-gray-600">Siguiente</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </SupervisorLayout>
+    );
 }

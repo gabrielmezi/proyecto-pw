@@ -3,7 +3,7 @@ export default function BotonNavegacion({ children, activo = false }) {
     <button
       type="button"
       data-activo={activo}
-      className="enabled:hover:bg-primary-dark flex min-h-10 w-full cursor-pointer items-center
+      className="enabled:hover:bg-gray-200 flex min-h-10 w-full cursor-pointer items-center
       justify-betweenrounded-sm px-3 py-2 text-left text-[13px]
       text-muted transition-colors duration-150 data-[activo=true]:border-l-2
       data-[activo=true]:border-primary data-[activo=true]:bg-primary-soft
