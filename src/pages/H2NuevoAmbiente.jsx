@@ -6,7 +6,7 @@ import Modal from "../estilo/Modal";
 export default function H2NuevoAmbiente() {
   return (
     <Modal titulo="Nuevo ambiente">
-      <div className="formulario">
+      <div className="grid gap-5 sm:grid-cols-2">
         <Campo titulo="CÓDIGO" valor="H-212" />
         <Selector titulo="TIPO DE AMBIENTE">
           <option>Laboratorio</option>
@@ -16,7 +16,7 @@ export default function H2NuevoAmbiente() {
         <Campo titulo="PABELLÓN · PISO" valor="H · piso 2" />
         <Campo titulo="CAPACIDAD" valor="30" />
       </div>
-      <div className="acciones">
+      <div data-acciones className="flex flex-wrap items-center gap-3">
         <Boton variante="secundario">Cancelar</Boton>
         <Boton variante="primario">Guardar ambiente</Boton>
       </div>

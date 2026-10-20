@@ -17,7 +17,7 @@ export default function H7Usuarios() {
         <Boton variante="primario">Invitar técnico</Boton>
         <Boton variante="secundario">Exportar cuentas</Boton>
       </TituloPagina>
-      <div className="filtros">
+      <div className="mb-4 flex flex-wrap items-center gap-3">
         <Campo titulo="BUSCAR POR NOMBRE O CORREO" valor="" ayuda="" />
         <Selector titulo="ROL">
           <option>Todos</option>
@@ -60,7 +60,7 @@ export default function H7Usuarios() {
               <Etiqueta tono="success">Activo</Etiqueta>
             </td>
             <td>
-              <div className="acciones">
+              <div data-acciones className="flex flex-wrap items-center gap-3">
                 <Boton variante="terciario">Ver ficha</Boton>
                 <Boton variante="terciario">Bloquear</Boton>
               </div>
@@ -76,7 +76,7 @@ export default function H7Usuarios() {
               <Etiqueta tono="success">Activo</Etiqueta>
             </td>
             <td>
-              <div className="acciones">
+              <div data-acciones className="flex flex-wrap items-center gap-3">
                 <Boton variante="terciario">Ver ficha</Boton>
                 <Boton variante="terciario">Bloquear</Boton>
               </div>
@@ -92,7 +92,7 @@ export default function H7Usuarios() {
               <Etiqueta tono="success">Activo</Etiqueta>
             </td>
             <td>
-              <div className="acciones">
+              <div data-acciones className="flex flex-wrap items-center gap-3">
                 <Boton variante="terciario">Ver ficha</Boton>
                 <Boton variante="terciario">Bloquear</Boton>
               </div>
@@ -108,7 +108,7 @@ export default function H7Usuarios() {
               <Etiqueta tono="success">Activo</Etiqueta>
             </td>
             <td>
-              <div className="acciones">
+              <div data-acciones className="flex flex-wrap items-center gap-3">
                 <Boton variante="terciario">Ver ficha</Boton>
                 <Boton variante="terciario">Bloquear</Boton>
               </div>
@@ -124,7 +124,7 @@ export default function H7Usuarios() {
               <Etiqueta tono="success">Activo</Etiqueta>
             </td>
             <td>
-              <div className="acciones">
+              <div data-acciones className="flex flex-wrap items-center gap-3">
                 <Boton variante="terciario">Ver ficha</Boton>
                 <Boton variante="terciario">Bloquear</Boton>
               </div>
@@ -140,7 +140,7 @@ export default function H7Usuarios() {
               <Etiqueta tono="success">Activo</Etiqueta>
             </td>
             <td>
-              <div className="acciones">
+              <div data-acciones className="flex flex-wrap items-center gap-3">
                 <Boton variante="terciario">Ver ficha</Boton>
                 <Boton variante="terciario">Bloquear</Boton>
               </div>
@@ -156,7 +156,7 @@ export default function H7Usuarios() {
               <Etiqueta tono="success">Activo</Etiqueta>
             </td>
             <td>
-              <div className="acciones">
+              <div data-acciones className="flex flex-wrap items-center gap-3">
                 <Boton variante="terciario">Ver ficha</Boton>
                 <Boton variante="terciario">Bloquear</Boton>
               </div>
@@ -172,7 +172,7 @@ export default function H7Usuarios() {
               <Etiqueta tono="success">Activo</Etiqueta>
             </td>
             <td>
-              <div className="acciones">
+              <div data-acciones className="flex flex-wrap items-center gap-3">
                 <Boton variante="terciario">Ver ficha</Boton>
                 <Boton variante="terciario">Bloquear</Boton>
               </div>
@@ -188,7 +188,7 @@ export default function H7Usuarios() {
               <Etiqueta tono="success">Activo</Etiqueta>
             </td>
             <td>
-              <div className="acciones">
+              <div data-acciones className="flex flex-wrap items-center gap-3">
                 <Boton variante="terciario">Ver ficha</Boton>
                 <Boton variante="terciario">Bloquear</Boton>
               </div>
@@ -204,7 +204,7 @@ export default function H7Usuarios() {
               <Etiqueta tono="success">Activo</Etiqueta>
             </td>
             <td>
-              <div className="acciones">
+              <div data-acciones className="flex flex-wrap items-center gap-3">
                 <Boton variante="terciario">Ver ficha</Boton>
                 <Boton variante="terciario">Bloquear</Boton>
               </div>
@@ -220,7 +220,7 @@ export default function H7Usuarios() {
               <Etiqueta tono="success">Activo</Etiqueta>
             </td>
             <td>
-              <div className="acciones">
+              <div data-acciones className="flex flex-wrap items-center gap-3">
                 <Boton variante="terciario">Ver ficha</Boton>
                 <Boton variante="terciario">Bloquear</Boton>
               </div>
@@ -236,7 +236,7 @@ export default function H7Usuarios() {
               <Etiqueta tono="danger">Bloqueado</Etiqueta>
             </td>
             <td>
-              <div className="acciones">
+              <div data-acciones className="flex flex-wrap items-center gap-3">
                 <Boton variante="terciario">Ver ficha</Boton>
                 <Boton variante="terciario">Bloquear</Boton>
               </div>
@@ -252,7 +252,7 @@ export default function H7Usuarios() {
               <Etiqueta tono="success">Activo</Etiqueta>
             </td>
             <td>
-              <div className="acciones">
+              <div data-acciones className="flex flex-wrap items-center gap-3">
                 <Boton variante="terciario">Ver ficha</Boton>
                 <Boton variante="terciario">Bloquear</Boton>
               </div>
@@ -268,7 +268,7 @@ export default function H7Usuarios() {
               <Etiqueta tono="success">Activo</Etiqueta>
             </td>
             <td>
-              <div className="acciones">
+              <div data-acciones className="flex flex-wrap items-center gap-3">
                 <Boton variante="terciario">Ver ficha</Boton>
                 <Boton variante="terciario">Bloquear</Boton>
               </div>
@@ -284,7 +284,7 @@ export default function H7Usuarios() {
               <Etiqueta tono="muted">Inactivo</Etiqueta>
             </td>
             <td>
-              <div className="acciones">
+              <div data-acciones className="flex flex-wrap items-center gap-3">
                 <Boton variante="terciario">Ver ficha</Boton>
                 <Boton variante="terciario">Bloquear</Boton>
               </div>

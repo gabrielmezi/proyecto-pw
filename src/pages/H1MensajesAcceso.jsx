@@ -31,13 +31,13 @@ export default function H1MensajesAcceso() {
             Cuenta bloqueada por 15 minutos tras cinco intentos fallidos. Podrás
             ingresar a las 10:42 o restablecer tu contraseña ahora.
           </Aviso>
-          <div className="acciones">
+          <div data-acciones className="flex flex-wrap items-center gap-3">
             <Boton variante="primario">Restablecer contraseña</Boton>
             <Boton variante="terciario">Escribir a soporte</Boton>
           </div>
         </Tarjeta>
         <Tarjeta titulo="Sesión">
-          <button type="button" disabled className="boton opacity-60">
+          <button type="button" disabled className="inline-flex min-h-10 items-center justify-center gap-2 rounded-sm border border-primary bg-primary px-4 py-2 text-[13px] font-medium text-white data-[variante=secundario]:bg-white data-[variante=secundario]:text-primary data-[variante=terciario]:border-transparent data-[variante=terciario]:bg-transparent data-[variante=terciario]:px-1 data-[variante=terciario]:text-primary data-[variante=peligro]:border-danger data-[variante=peligro]:bg-danger data-[variante=peligro]:text-white opacity-60">
             Ingresando…
           </button>
           <Aviso tono="success">

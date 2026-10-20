@@ -14,7 +14,7 @@ export default function H5CerrarTicket() {
         valor="Se reemplazó el extensor HDBaseT del rack del piso 2 y se verificó la proyección con dos laptops distintas."
         ayuda=""
       />
-      <div className="formulario">
+      <div className="grid gap-5 sm:grid-cols-2">
         <Metrica
           titulo="TIEMPO TOTAL DE ATENCIÓN"
           valor="3 h 24 min"
@@ -28,7 +28,7 @@ export default function H5CerrarTicket() {
         Al cerrar, Camila Quispe Ramos recibirá la encuesta de satisfacción y
         podrá reabrir el ticket dentro de 7 días.
       </Aviso>
-      <div className="acciones">
+      <div data-acciones className="flex flex-wrap items-center gap-3">
         <Boton variante="secundario">Cancelar</Boton>
         <Boton variante="primario">Cerrar ticket</Boton>
       </div>

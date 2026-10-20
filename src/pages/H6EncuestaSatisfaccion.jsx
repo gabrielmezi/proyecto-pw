@@ -12,10 +12,10 @@ export default function H6EncuestaSatisfaccion() {
         titulo="¿Cómo fue la atención de tu ticket?"
         descripcion="Tu respuesta ayuda al área de Infraestructura a mejorar los tiempos y el trato. Toma menos de un minuto."
       ></TituloPagina>
-      <div className="dos-columnas">
+      <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,2.6fr)_minmax(260px,1fr)]">
         <div className="space-y-6">
           <Tarjeta titulo="PUNTAJE GENERAL">
-            <div className="acciones">
+            <div data-acciones className="flex flex-wrap items-center gap-3">
               <Boton variante="secundario">1</Boton>
               <Boton variante="secundario">2</Boton>
               <Boton variante="secundario">3</Boton>
@@ -23,9 +23,9 @@ export default function H6EncuestaSatisfaccion() {
               <Boton variante="secundario">5</Boton>
             </div>
             <p className="text-primary">4 · Buena atención</p>
-            <h3>CALIFICACIÓN POR ASPECTOS</h3>
+            <h3 className="text-base font-semibold">CALIFICACIÓN POR ASPECTOS</h3>
             <p>Rapidez</p>
-            <div className="acciones">
+            <div data-acciones className="flex flex-wrap items-center gap-3">
               <Boton variante="secundario">1</Boton>
               <Boton variante="secundario">2</Boton>
               <Boton variante="secundario">3</Boton>
@@ -33,7 +33,7 @@ export default function H6EncuestaSatisfaccion() {
               <Boton variante="secundario">5</Boton>
             </div>
             <p>Trato del técnico</p>
-            <div className="acciones">
+            <div data-acciones className="flex flex-wrap items-center gap-3">
               <Boton variante="secundario">1</Boton>
               <Boton variante="secundario">2</Boton>
               <Boton variante="secundario">3</Boton>
@@ -41,7 +41,7 @@ export default function H6EncuestaSatisfaccion() {
               <Boton variante="secundario">5</Boton>
             </div>
             <p>Solución del problema</p>
-            <div className="acciones">
+            <div data-acciones className="flex flex-wrap items-center gap-3">
               <Boton variante="secundario">1</Boton>
               <Boton variante="secundario">2</Boton>
               <Boton variante="secundario">3</Boton>
@@ -53,7 +53,7 @@ export default function H6EncuestaSatisfaccion() {
               valor="El técnico llegó rápido y explicó qué había pasado. Tardó un día porque faltaba el repuesto."
               ayuda="Tu comentario lo lee el supervisor del área; el técnico lo ve sin tu nombre."
             />
-            <div className="acciones">
+            <div data-acciones className="flex flex-wrap items-center gap-3">
               <Boton variante="primario">Enviar encuesta</Boton>
               <Boton variante="secundario">Responder después</Boton>
             </div>

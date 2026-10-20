@@ -19,12 +19,12 @@ export default function H5DetalleAtencion() {
         <Boton variante="primario">Cerrar ticket</Boton>
         <Boton variante="secundario">Historial</Boton>
       </TituloPagina>
-      <div className="dos-columnas">
+      <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,2.6fr)_minmax(260px,1fr)]">
         <div className="space-y-6">
-          <h2 className="mb-6">Bitácora · 6 entradas</h2>
-          <div className="bitacora">
+          <h2 className="text-xl leading-7 font-semibold mb-6">Bitácora · 6 entradas</h2>
+          <div className="border-l-2 border-border pl-6 [&_article]:relative [&_article]:mb-6 [&_article]:rounded-sm [&_article]:border [&_article]:border-border [&_article]:bg-white [&_article]:p-4 [&_article]:before:absolute [&_article]:before:-left-[33px] [&_article]:before:top-5 [&_article]:before:h-3 [&_article]:before:w-3 [&_article]:before:rounded-full [&_article]:before:border-2 [&_article]:before:border-primary [&_article]:before:bg-white [&_article]:before:content-['']">
             <article>
-              <h3>Camila Quispe Ramos</h3>
+              <h3 className="text-base font-semibold">Camila Quispe Ramos</h3>
               <p className="mb-3 text-xs text-muted">
                 Usuario · 07/09/2026 08:12 · COMENTARIO PÚBLICO
               </p>
@@ -34,7 +34,7 @@ export default function H5DetalleAtencion() {
               </p>
             </article>
             <article>
-              <h3>Lucía Mendoza Ríos</h3>
+              <h3 className="text-base font-semibold">Lucía Mendoza Ríos</h3>
               <p className="mb-3 text-xs text-muted">
                 Supervisor · 07/09/2026 08:20 · COMENTARIO PÚBLICO
               </p>
@@ -44,7 +44,7 @@ export default function H5DetalleAtencion() {
               </p>
             </article>
             <article className="bg-amber-50!">
-              <h3>Julio Paredes Soto</h3>
+              <h3 className="text-base font-semibold">Julio Paredes Soto</h3>
               <p className="mb-3 text-xs text-warning">
                 Técnico · 07/09/2026 08:41 · NOTA INTERNA · NO VISIBLE PARA EL
                 USUARIO
@@ -55,7 +55,7 @@ export default function H5DetalleAtencion() {
               </p>
             </article>
             <article>
-              <h3>Julio Paredes Soto</h3>
+              <h3 className="text-base font-semibold">Julio Paredes Soto</h3>
               <p className="mb-3 text-xs text-muted">
                 Técnico · 07/09/2026 09:05 · COMENTARIO PÚBLICO
               </p>
@@ -66,7 +66,7 @@ export default function H5DetalleAtencion() {
             </article>
           </div>
           <Tarjeta titulo="Nueva entrada de bitácora">
-            <div className="acciones">
+            <div data-acciones className="flex flex-wrap items-center gap-3">
               <Boton variante="secundario">Comentario público</Boton>
               <Boton variante="primario">Nota interna</Boton>
             </div>
@@ -79,7 +79,7 @@ export default function H5DetalleAtencion() {
               valor="Extensor HDBaseT del rack del piso 2 sin salida. Pedí repuesto al almacén con guía 4471."
               ayuda=""
             />
-            <div className="acciones">
+            <div data-acciones className="flex flex-wrap items-center gap-3">
               <Boton variante="primario">Guardar nota interna</Boton>
               <Boton variante="secundario">Adjuntar foto</Boton>
             </div>
@@ -107,7 +107,7 @@ export default function H5DetalleAtencion() {
             </p>
           </Tarjeta>
           <Tarjeta titulo="Ambiente">
-            <h2 className="font-mono">A-201</h2>
+            <h2 className="text-xl leading-7 font-semibold font-mono">A-201</h2>
             <p>Aula · Pabellón A · piso 2 · capacidad 68 · Campus Monterrico</p>
             <p>
               2 tickets abiertos en este ambiente · último cierre 28/08/2026

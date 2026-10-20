@@ -8,7 +8,7 @@ export default function H3CancelarTicket() {
         Este ticket aún no tiene un técnico asignado. ¿Confirmas que deseas
         cancelarlo?
       </p>
-      <div className="acciones">
+      <div data-acciones className="flex flex-wrap items-center gap-3">
         <Boton variante="secundario">Volver</Boton>
         <Boton variante="peligro">Cancelar ticket</Boton>
       </div>

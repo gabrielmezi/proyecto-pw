@@ -20,7 +20,7 @@ export default function H4BandejaTecnico() {
         <Metrica titulo="EN ESPERA" valor="2" detalle="" />
         <Metrica titulo="RESUELTOS" valor="2" detalle="" />
       </div>
-      <div className="filtros">
+      <div className="mb-4 flex flex-wrap items-center gap-3">
         <Boton variante="primario">Todos (8)</Boton>
         <Boton variante="secundario">Solo críticos (3)</Boton>
         <Boton variante="secundario">Fuera de plazo (1)</Boton>

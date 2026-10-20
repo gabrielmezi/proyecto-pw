@@ -18,7 +18,7 @@ export default function H4ColaAtencion() {
         <Etiqueta tono="muted">En espera</Etiqueta> 3{" "}
         <Etiqueta tono="success">Resuelto</Etiqueta> 4
       </TituloPagina>
-      <div className="filtros">
+      <div className="mb-4 flex flex-wrap items-center gap-3">
         <Campo titulo="BUSCAR CÓDIGO O ASUNTO" valor="" ayuda="" />
         <Boton variante="secundario">Prioridad: crítica, alta ×</Boton>
         <Boton variante="secundario">Estado: abierto, en atención ×</Boton>

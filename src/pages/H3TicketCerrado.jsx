@@ -21,7 +21,7 @@ export default function H3TicketCerrado() {
           Tienes una encuesta pendiente para este ticket. Puedes responderla
           hasta el 10/09/2026.
         </Aviso>
-        <div className="acciones">
+        <div data-acciones className="flex flex-wrap items-center gap-3">
           <Boton variante="primario">Responder encuesta</Boton>
           <Boton variante="secundario">Reabrir ticket</Boton>
         </div>

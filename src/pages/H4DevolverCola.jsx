@@ -8,7 +8,7 @@ export default function H4DevolverCola() {
         Se quitará el técnico asignado y los tickets volverán al estado Abierto.
         La bitácora conserva el historial.
       </p>
-      <div className="acciones">
+      <div data-acciones className="flex flex-wrap items-center gap-3">
         <Boton variante="secundario">Cancelar</Boton>
         <Boton variante="peligro">Devolver a la cola</Boton>
       </div>

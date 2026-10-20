@@ -1,3 +1,5 @@
+import BotonNavegacion from "../estilo/BotonNavegacion";
+
 export default function TecnicoLayout({ children, pagina }) {
   return (
     <div className="flex min-h-screen flex-col" data-pagina={pagina}>
@@ -29,32 +31,32 @@ export default function TecnicoLayout({ children, pagina }) {
             aria-label="Navegación Tecnico"
             className="grid grid-cols-2 md:block"
           >
-            <button type="button" className="nav-item nav-bandeja">
-              Mi bandeja<span className="contador">8</span>
-            </button>
-            <button type="button" className="nav-item nav-atencion">
-              En atención<span className="contador">3</span>
-            </button>
-            <button type="button" className="nav-item nav-espera">
-              En espera<span className="contador">2</span>
-            </button>
-            <button type="button" className="nav-item nav-resueltos">
-              Resueltos hoy<span className="contador">2</span>
-            </button>
-            <button type="button" className="nav-item nav-historial">
+            <BotonNavegacion activo={pagina === "bandeja"}>
+              Mi bandeja<span className="rounded-sm border border-border bg-background px-1 text-[11px]">8</span>
+            </BotonNavegacion>
+            <BotonNavegacion activo={pagina === "atencion"}>
+              En atención<span className="rounded-sm border border-border bg-background px-1 text-[11px]">3</span>
+            </BotonNavegacion>
+            <BotonNavegacion activo={pagina === "espera"}>
+              En espera<span className="rounded-sm border border-border bg-background px-1 text-[11px]">2</span>
+            </BotonNavegacion>
+            <BotonNavegacion activo={pagina === "resueltos"}>
+              Resueltos hoy<span className="rounded-sm border border-border bg-background px-1 text-[11px]">2</span>
+            </BotonNavegacion>
+            <BotonNavegacion activo={pagina === "historial"}>
               Historial
-            </button>
-            <button type="button" className="nav-item nav-cuenta">
+            </BotonNavegacion>
+            <BotonNavegacion activo={pagina === "cuenta"}>
               Mi cuenta
-            </button>
+            </BotonNavegacion>
           </nav>
           <div className="mt-auto border-t border-border pt-2 md:mt-auto">
-            <button type="button" className="nav-item">
+            <BotonNavegacion>
               Mi cuenta
-            </button>
-            <button type="button" className="nav-item">
+            </BotonNavegacion>
+            <BotonNavegacion>
               Cerrar sesión
-            </button>
+            </BotonNavegacion>
           </div>
         </aside>
         <div className="flex min-w-0 flex-1 flex-col">

@@ -14,7 +14,7 @@ export default function H3ReabrirTicket() {
         valor="La limpieza se hizo, pero quedaron restos de pintura en el piso junto a la ventana."
         ayuda="El ticket volverá al estado Reabierto y regresará a la cola con su prioridad original."
       />
-      <div className="acciones">
+      <div data-acciones className="flex flex-wrap items-center gap-3">
         <Boton variante="secundario">Cancelar</Boton>
         <Boton variante="peligro">Reabrir ticket</Boton>
       </div>

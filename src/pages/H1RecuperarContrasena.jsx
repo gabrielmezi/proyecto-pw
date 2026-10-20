@@ -19,7 +19,7 @@ export default function H1RecuperarContrasena() {
             valor="camila.quispe@aloe.ulima.edu.pe"
             ayuda="Si la cuenta existe recibirás el enlace; por seguridad no informamos lo contrario."
           />
-          <div className="acciones">
+          <div data-acciones className="flex flex-wrap items-center gap-3">
             <Boton variante="primario">Enviar enlace</Boton>
             <Boton variante="terciario">Volver a iniciar sesión</Boton>
           </div>

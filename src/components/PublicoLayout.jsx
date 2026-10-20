@@ -18,7 +18,7 @@ export default function PublicoLayout({ children }) {
             <button type="button">Categorías de servicio</button>
             <button type="button">Tiempos de atención</button>
           </nav>
-          <div className="acciones ml-auto">
+          <div data-acciones className="flex flex-wrap items-center gap-3 ml-auto">
             <Boton variante="secundario">Iniciar sesión</Boton>
             <Boton variante="primario">Registrarme</Boton>
           </div>
@@ -30,7 +30,7 @@ export default function PublicoLayout({ children }) {
       <footer className="bg-primary-dark px-6 py-8 text-white lg:px-12">
         <div className="mx-auto grid max-w-[1800px] gap-8 text-[13px] md:grid-cols-[2fr_1fr_2fr_1fr]">
           <div className="space-y-2">
-            <h3>Mesa de Ayuda de Servicios</h3>
+            <h3 className="text-base font-semibold">Mesa de Ayuda de Servicios</h3>
             <p>
               Universidad de Lima · Dirección de Infraestructura y Servicios
             </p>

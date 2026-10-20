@@ -15,7 +15,7 @@ export default function H2Ambientes() {
       >
         <Boton variante="primario">Nuevo ambiente</Boton>
       </TituloPagina>
-      <div className="filtros">
+      <div className="mb-4 flex flex-wrap items-center gap-3">
         <Campo titulo="BUSCAR POR CÓDIGO O NOMBRE" valor="" ayuda="" />
         <Selector titulo="SEDE">
           <option>Monterrico</option>

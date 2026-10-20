@@ -15,7 +15,7 @@ export default function H1Invitacion() {
           descripcion="Lucía Mendoza Ríos te invitó a la Mesa de Ayuda. Revisa tus datos, define tu contraseña y elige tu especialidad."
         ></TituloPagina>
         <Tarjeta titulo="Datos de la invitación">
-          <div className="formulario">
+          <div className="grid gap-5 sm:grid-cols-2">
             <Campo
               titulo="NOMBRES Y APELLIDOS"
               valor="Julio César Paredes Soto"
@@ -40,7 +40,7 @@ export default function H1Invitacion() {
           <p className="text-xs text-muted">
             ESPECIALIDAD · ELIGE HASTA TRES CATEGORÍAS
           </p>
-          <div className="formulario">
+          <div className="grid gap-5 sm:grid-cols-2">
             <label className="flex items-center gap-2 text-[13px]">
               <input
                 type="checkbox"
@@ -78,7 +78,7 @@ export default function H1Invitacion() {
               Accesos y cerraduras
             </label>
           </div>
-          <div className="acciones">
+          <div data-acciones className="flex flex-wrap items-center gap-3">
             <Boton variante="primario">Activar mi cuenta</Boton>
             <Boton variante="secundario">Rechazar invitación</Boton>
           </div>

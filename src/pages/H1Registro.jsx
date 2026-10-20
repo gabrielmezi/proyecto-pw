@@ -13,10 +13,10 @@ export default function H1Registro() {
           titulo="Crear mi cuenta"
           descripcion="Solo para miembros de la comunidad con correo institucional."
         ></TituloPagina>
-        <div className="dos-columnas">
+        <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,2.6fr)_minmax(260px,1fr)]">
           <div className="space-y-6">
             <Tarjeta titulo="Datos de registro">
-              <div className="formulario">
+              <div className="grid gap-5 sm:grid-cols-2">
                 <Campo titulo="NOMBRES" valor="Camila Alejandra" ayuda="" />
                 <Campo titulo="APELLIDOS" valor="Quispe Ramos" ayuda="" />
                 <Campo
@@ -58,7 +58,7 @@ export default function H1Registro() {
                 <input type="checkbox" className="h-4 w-4 accent-primary" />
                 Acepto los términos del servicio y la política de privacidad.
               </label>
-              <div className="acciones">
+              <div data-acciones className="flex flex-wrap items-center gap-3">
                 <Boton variante="primario">Crear cuenta</Boton>
                 <Boton variante="secundario">Cancelar</Boton>
               </div>

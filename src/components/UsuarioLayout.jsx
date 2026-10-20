@@ -1,3 +1,5 @@
+import BotonNavegacion from "../estilo/BotonNavegacion";
+
 export default function UsuarioLayout({ children, pagina }) {
   return (
     <div className="flex min-h-screen flex-col" data-pagina={pagina}>
@@ -29,32 +31,32 @@ export default function UsuarioLayout({ children, pagina }) {
             aria-label="Navegación Usuario"
             className="grid grid-cols-2 md:block"
           >
-            <button type="button" className="nav-item nav-inicio">
+            <BotonNavegacion activo={pagina === "inicio"}>
               Inicio
-            </button>
-            <button type="button" className="nav-item nav-nuevo-ticket">
+            </BotonNavegacion>
+            <BotonNavegacion activo={pagina === "nuevo-ticket"}>
               Nuevo ticket
-            </button>
-            <button type="button" className="nav-item nav-mis-tickets">
-              Mis tickets<span className="contador">12</span>
-            </button>
-            <button type="button" className="nav-item nav-encuesta">
-              Encuesta pendiente<span className="contador">1</span>
-            </button>
-            <button type="button" className="nav-item nav-mis-encuestas">
-              Mis encuestas<span className="contador">7</span>
-            </button>
-            <button type="button" className="nav-item nav-cuenta">
+            </BotonNavegacion>
+            <BotonNavegacion activo={pagina === "mis-tickets"}>
+              Mis tickets<span className="rounded-sm border border-border bg-background px-1 text-[11px]">12</span>
+            </BotonNavegacion>
+            <BotonNavegacion activo={pagina === "encuesta"}>
+              Encuesta pendiente<span className="rounded-sm border border-border bg-background px-1 text-[11px]">1</span>
+            </BotonNavegacion>
+            <BotonNavegacion activo={pagina === "mis-encuestas"}>
+              Mis encuestas<span className="rounded-sm border border-border bg-background px-1 text-[11px]">7</span>
+            </BotonNavegacion>
+            <BotonNavegacion activo={pagina === "cuenta"}>
               Mi cuenta
-            </button>
+            </BotonNavegacion>
           </nav>
           <div className="mt-auto border-t border-border pt-2 md:mt-auto">
-            <button type="button" className="nav-item">
+            <BotonNavegacion>
               Mi cuenta
-            </button>
-            <button type="button" className="nav-item">
+            </BotonNavegacion>
+            <BotonNavegacion>
               Cerrar sesión
-            </button>
+            </BotonNavegacion>
           </div>
         </aside>
         <div className="flex min-w-0 flex-1 flex-col">

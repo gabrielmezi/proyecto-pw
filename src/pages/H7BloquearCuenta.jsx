@@ -18,7 +18,7 @@ export default function H7BloquearCuenta() {
         <input type="checkbox" className="h-4 w-4 accent-primary" />
         Notificar a la persona por correo
       </label>
-      <div className="acciones">
+      <div data-acciones className="flex flex-wrap items-center gap-3">
         <Boton variante="secundario">Cancelar</Boton>
         <Boton variante="peligro">Bloquear cuenta</Boton>
       </div>

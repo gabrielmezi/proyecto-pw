@@ -42,7 +42,7 @@ export default function H7FichaUsuario() {
           </div>
         </Tarjeta>
       </div>
-      <h2 className="mb-4">Historial de reportes</h2>
+      <h2 className="text-xl leading-7 font-semibold mb-4">Historial de reportes</h2>
       <TablaTickets />
     </SupervisorLayout>
   );

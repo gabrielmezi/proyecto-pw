@@ -11,7 +11,7 @@ export default function H1PaginaNoEncontrada() {
           titulo="No encontramos esta página"
           descripcion="El enlace puede haber cambiado. Si buscabas un ticket, ingresa su código en el buscador de la cabecera."
         ></TituloPagina>
-        <div className="acciones">
+        <div data-acciones className="flex flex-wrap items-center gap-3">
           <Boton variante="primario">Ir al inicio</Boton>
           <Boton variante="secundario">Buscar un ticket</Boton>
         </div>

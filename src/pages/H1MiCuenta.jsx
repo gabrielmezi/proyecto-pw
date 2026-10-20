@@ -13,10 +13,10 @@ export default function H1MiCuenta() {
         titulo="Mi cuenta"
         descripcion="Tus datos se usan para contactarte durante la atención de un ticket."
       ></TituloPagina>
-      <div className="dos-columnas">
+      <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,2.6fr)_minmax(260px,1fr)]">
         <div className="space-y-6">
           <Tarjeta titulo="Datos personales">
-            <div className="formulario">
+            <div className="grid gap-5 sm:grid-cols-2">
               <Campo titulo="NOMBRES" valor="Camila Alejandra" ayuda="" />
               <Campo titulo="APELLIDOS" valor="Quispe Ramos" ayuda="" />
               <Campo
@@ -36,13 +36,13 @@ export default function H1MiCuenta() {
                 <option>E-304</option>
               </Selector>
             </div>
-            <div className="acciones">
+            <div data-acciones className="flex flex-wrap items-center gap-3">
               <Boton variante="primario">Guardar cambios</Boton>
               <Boton variante="secundario">Descartar</Boton>
             </div>
           </Tarjeta>
           <Tarjeta titulo="Cambiar contraseña">
-            <div className="formulario">
+            <div className="grid gap-5 sm:grid-cols-2">
               <Campo titulo="ACTUAL" tipo="password" valor="Contrasena1" />
               <Campo titulo="NUEVA" tipo="password" valor="Contrasena2" />
               <Campo titulo="CONFIRMAR" tipo="password" valor="Contrasena2" />
@@ -64,7 +64,7 @@ export default function H1MiCuenta() {
             </p>
           </Tarjeta>
           <Aviso tono="info">
-            <h3>Encuesta pendiente</h3>
+            <h3 className="text-base font-semibold">Encuesta pendiente</h3>
             <p>
               El ticket TCK-2026-00131 se cerró el 03/09/2026. Califica la
               atención antes del 10/09/2026.

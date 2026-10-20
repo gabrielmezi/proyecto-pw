@@ -17,7 +17,7 @@ export default function H2Categorias() {
         <Boton variante="secundario">Exportar catálogo</Boton>
         <Boton variante="primario">Nueva categoría</Boton>
       </TituloPagina>
-      <div className="filtros">
+      <div className="mb-4 flex flex-wrap items-center gap-3">
         <Campo titulo="BUSCAR" valor="" ayuda="Categoría o subcategoría" />
         <Boton variante="secundario">Solo activas ×</Boton>
         <Selector titulo="PRIORIDAD">
@@ -58,7 +58,7 @@ export default function H2Categorias() {
           </tr>
           <tr>
             <td>
-              <span className="subcategoria">Proyector no enciende</span>
+              <span data-subcategoria>Proyector no enciende</span>
             </td>
             <td>
               <Etiqueta tono="danger">Crítica</Etiqueta>
@@ -75,7 +75,7 @@ export default function H2Categorias() {
           </tr>
           <tr>
             <td>
-              <span className="subcategoria">Imagen distorsionada</span>
+              <span data-subcategoria>Imagen distorsionada</span>
             </td>
             <td>
               <Etiqueta tono="warning">Media</Etiqueta>
@@ -92,7 +92,7 @@ export default function H2Categorias() {
           </tr>
           <tr>
             <td>
-              <span className="subcategoria">Audio sin señal</span>
+              <span data-subcategoria>Audio sin señal</span>
             </td>
             <td>
               <Etiqueta tono="warning">Media</Etiqueta>
@@ -109,7 +109,7 @@ export default function H2Categorias() {
           </tr>
           <tr>
             <td>
-              <span className="subcategoria">Ecran atascado</span>
+              <span data-subcategoria>Ecran atascado</span>
             </td>
             <td>
               <Etiqueta tono="info">Baja</Etiqueta>
@@ -141,7 +141,7 @@ export default function H2Categorias() {
           </tr>
           <tr>
             <td>
-              <span className="subcategoria">Aire sin frío</span>
+              <span data-subcategoria>Aire sin frío</span>
             </td>
             <td>
               <Etiqueta tono="accent">Alta</Etiqueta>
@@ -158,7 +158,7 @@ export default function H2Categorias() {
           </tr>
           <tr>
             <td>
-              <span className="subcategoria">Fuga de condensado</span>
+              <span data-subcategoria>Fuga de condensado</span>
             </td>
             <td>
               <Etiqueta tono="accent">Alta</Etiqueta>
@@ -190,7 +190,7 @@ export default function H2Categorias() {
           </tr>
           <tr>
             <td>
-              <span className="subcategoria">Punto de red caído</span>
+              <span data-subcategoria>Punto de red caído</span>
             </td>
             <td>
               <Etiqueta tono="danger">Crítica</Etiqueta>
@@ -207,7 +207,7 @@ export default function H2Categorias() {
           </tr>
           <tr>
             <td>
-              <span className="subcategoria">Señal intermitente</span>
+              <span data-subcategoria>Señal intermitente</span>
             </td>
             <td>
               <Etiqueta tono="warning">Media</Etiqueta>
@@ -239,7 +239,7 @@ export default function H2Categorias() {
           </tr>
           <tr>
             <td>
-              <span className="subcategoria">Silla rota</span>
+              <span data-subcategoria>Silla rota</span>
             </td>
             <td>
               <Etiqueta tono="info">Baja</Etiqueta>

@@ -16,7 +16,7 @@ export default function H1AccesoDenegado() {
           catálogo de servicios son exclusivos del supervisor. Si necesitas ese
           acceso, solicítalo a Infraestructura y Servicios.
         </p>
-        <div className="acciones">
+        <div data-acciones className="flex flex-wrap items-center gap-3">
           <Boton variante="primario">Ir a mis tickets</Boton>
           <Boton variante="secundario">Solicitar acceso</Boton>
         </div>

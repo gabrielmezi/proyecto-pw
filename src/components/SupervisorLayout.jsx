@@ -1,3 +1,5 @@
+import BotonNavegacion from "../estilo/BotonNavegacion";
+
 export default function SupervisorLayout({ children, pagina }) {
   return (
     <div className="flex min-h-screen flex-col" data-pagina={pagina}>
@@ -29,41 +31,41 @@ export default function SupervisorLayout({ children, pagina }) {
             aria-label="Navegación Supervisor"
             className="grid grid-cols-2 md:block"
           >
-            <button type="button" className="nav-item nav-tablero">
+            <BotonNavegacion activo={pagina === "tablero"}>
               Tablero
-            </button>
-            <button type="button" className="nav-item nav-cola">
-              Cola de atención<span className="contador">24</span>
-            </button>
-            <button type="button" className="nav-item nav-bandejas">
-              Bandejas de técnicos<span className="contador">6</span>
-            </button>
-            <button type="button" className="nav-item nav-categorias">
-              Categorías<span className="contador">7</span>
-            </button>
-            <button type="button" className="nav-item nav-ambientes">
-              Sedes y ambientes<span className="contador">48</span>
-            </button>
-            <button type="button" className="nav-item nav-tecnicos">
+            </BotonNavegacion>
+            <BotonNavegacion activo={pagina === "cola"}>
+              Cola de atención<span className="rounded-sm border border-border bg-background px-1 text-[11px]">24</span>
+            </BotonNavegacion>
+            <BotonNavegacion activo={pagina === "bandejas"}>
+              Bandejas de técnicos<span className="rounded-sm border border-border bg-background px-1 text-[11px]">6</span>
+            </BotonNavegacion>
+            <BotonNavegacion activo={pagina === "categorias"}>
+              Categorías<span className="rounded-sm border border-border bg-background px-1 text-[11px]">7</span>
+            </BotonNavegacion>
+            <BotonNavegacion activo={pagina === "ambientes"}>
+              Sedes y ambientes<span className="rounded-sm border border-border bg-background px-1 text-[11px]">48</span>
+            </BotonNavegacion>
+            <BotonNavegacion activo={pagina === "tecnicos"}>
               Técnicos por categoría
-            </button>
-            <button type="button" className="nav-item nav-satisfaccion">
+            </BotonNavegacion>
+            <BotonNavegacion activo={pagina === "satisfaccion"}>
               Satisfacción
-            </button>
-            <button type="button" className="nav-item nav-carga">
+            </BotonNavegacion>
+            <BotonNavegacion activo={pagina === "carga"}>
               Carga por técnico
-            </button>
-            <button type="button" className="nav-item nav-usuarios">
-              Usuarios<span className="contador">15</span>
-            </button>
+            </BotonNavegacion>
+            <BotonNavegacion activo={pagina === "usuarios"}>
+              Usuarios<span className="rounded-sm border border-border bg-background px-1 text-[11px]">15</span>
+            </BotonNavegacion>
           </nav>
           <div className="mt-auto border-t border-border pt-2 md:mt-auto">
-            <button type="button" className="nav-item">
+            <BotonNavegacion>
               Mi cuenta
-            </button>
-            <button type="button" className="nav-item">
+            </BotonNavegacion>
+            <BotonNavegacion>
               Cerrar sesión
-            </button>
+            </BotonNavegacion>
           </div>
         </aside>
         <div className="flex min-w-0 flex-1 flex-col">

@@ -16,7 +16,7 @@ export default function H1IniciarSesion() {
             ayuda=""
           />
           <Campo titulo="CONTRASEÑA" tipo="password" valor="Contrasena1" />
-          <div className="acciones">
+          <div data-acciones className="flex flex-wrap items-center gap-3">
             <label className="flex items-center gap-2 text-[13px]">
               <input
                 type="checkbox"
@@ -35,7 +35,7 @@ export default function H1IniciarSesion() {
           </p>
         </Tarjeta>
         <aside className="space-y-4">
-          <h3>Acceso por rol</h3>
+          <h3 className="text-base font-semibold">Acceso por rol</h3>
           <p className="text-muted">
             Usuarios de la comunidad ingresan con su correo. Técnicos y
             supervisores reciben una invitación del área de Infraestructura y
