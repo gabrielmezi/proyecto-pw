@@ -58,7 +58,6 @@ export default function H4ColaAtencion() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Seleccionar TCK-2026-00147"
                 defaultChecked
                 className="accent-primary"
               />
@@ -85,7 +84,6 @@ export default function H4ColaAtencion() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Seleccionar TCK-2026-00146"
                 defaultChecked
                 className="accent-primary"
               />
@@ -112,7 +110,6 @@ export default function H4ColaAtencion() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Seleccionar TCK-2026-00145"
                 defaultChecked
                 className="accent-primary"
               />
@@ -139,7 +136,6 @@ export default function H4ColaAtencion() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Seleccionar TCK-2026-00144"
                 className="accent-primary"
               />
             </td>
@@ -165,7 +161,6 @@ export default function H4ColaAtencion() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Seleccionar TCK-2026-00143"
                 className="accent-primary"
               />
             </td>
@@ -191,7 +186,6 @@ export default function H4ColaAtencion() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Seleccionar TCK-2026-00142"
                 className="accent-primary"
               />
             </td>
@@ -217,7 +211,6 @@ export default function H4ColaAtencion() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Seleccionar TCK-2026-00141"
                 className="accent-primary"
               />
             </td>
@@ -243,7 +236,6 @@ export default function H4ColaAtencion() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Seleccionar TCK-2026-00140"
                 className="accent-primary"
               />
             </td>
@@ -269,7 +261,6 @@ export default function H4ColaAtencion() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Seleccionar TCK-2026-00139"
                 className="accent-primary"
               />
             </td>
@@ -295,7 +286,6 @@ export default function H4ColaAtencion() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Seleccionar TCK-2026-00138"
                 className="accent-primary"
               />
             </td>
@@ -321,7 +311,6 @@ export default function H4ColaAtencion() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Seleccionar TCK-2026-00137"
                 className="accent-primary"
               />
             </td>
@@ -347,7 +336,6 @@ export default function H4ColaAtencion() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Seleccionar TCK-2026-00136"
                 className="accent-primary"
               />
             </td>
@@ -373,7 +361,6 @@ export default function H4ColaAtencion() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Seleccionar TCK-2026-00135"
                 className="accent-primary"
               />
             </td>

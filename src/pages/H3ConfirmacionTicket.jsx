@@ -6,7 +6,7 @@ export default function H3ConfirmacionTicket() {
   return (
     <UsuarioLayout pagina="mis-tickets">
       <section className="mx-auto max-w-4xl space-y-5 rounded-sm border border-border bg-white px-5 py-8 text-center sm:p-8">
-          <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-sm border border-success bg-success/10 text-2xl font-semibold text-success" aria-hidden="true">✓</div>
+          <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-sm border border-success bg-success/10 text-2xl font-semibold text-success">✓</div>
           <h2 className="text-xl font-semibold">Tu ticket quedó registrado</h2>
           <p className="text-[13px] text-muted">
             Guarda el código: con él puedes buscar el ticket desde la cabecera

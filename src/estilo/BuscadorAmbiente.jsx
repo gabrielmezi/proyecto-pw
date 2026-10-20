@@ -9,7 +9,7 @@ export default function BuscadorAmbiente({ valor, ayuda }) {
         />
         <button
           type="button"
-          className="shrink-0 rounded-sm px-3 py-2 text-[13px] text-primary"
+          className="enabled:hover:bg-gray-200 shrink-0 rounded-sm px-3 py-2 text-[13px] text-primary"
         >
           Buscar
         </button>

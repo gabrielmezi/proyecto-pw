@@ -3,7 +3,7 @@ export default function H3BitacoraAtencion() {
     <div className="flex flex-col gap-3 text-sm">
       <article className="rounded-sm border border-border bg-white p-4">
         <header className="mb-2 flex flex-wrap items-center gap-2">
-          <span aria-hidden="true" className="flex h-8 w-8 shrink-0 items-center justify-center rounded-sm bg-accent text-xs font-semibold text-white">CQ</span>
+          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-sm bg-accent text-xs font-semibold text-white">CQ</span>
           <h3 className="text-sm font-medium">Camila Quispe Ramos</h3>
           <p className="text-xs text-muted">Usuario · 07/09/2026 08:12</p>
         </header>
@@ -14,7 +14,7 @@ export default function H3BitacoraAtencion() {
       </article>
       <article className="rounded-sm border border-border bg-white p-4">
         <header className="mb-2 flex flex-wrap items-center gap-2">
-          <span aria-hidden="true" className="flex h-8 w-8 shrink-0 items-center justify-center rounded-sm bg-primary-dark text-xs font-semibold text-white">LM</span>
+          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-sm bg-primary-dark text-xs font-semibold text-white">LM</span>
           <h3 className="text-sm font-medium">Lucía Mendoza Ríos</h3>
           <p className="text-xs text-muted">Supervisor · 07/09/2026 08:20</p>
         </header>
@@ -25,7 +25,7 @@ export default function H3BitacoraAtencion() {
       </article>
       <article className="rounded-sm border border-border bg-white p-4">
         <header className="mb-2 flex flex-wrap items-center gap-2">
-          <span aria-hidden="true" className="flex h-8 w-8 shrink-0 items-center justify-center rounded-sm bg-primary text-xs font-semibold text-white">JP</span>
+          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-sm bg-primary text-xs font-semibold text-white">JP</span>
           <h3 className="text-sm font-medium">Julio Paredes Soto</h3>
           <p className="text-xs text-muted">Técnico · 07/09/2026 09:05</p>
         </header>

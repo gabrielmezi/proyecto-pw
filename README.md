@@ -55,18 +55,8 @@ El servidor de desarrollo usa el puerto 6767. Si est? ocupado, Vite muestra un e
 | H5CambiarEstado.jsx        | /h5/cambiar-estado         |
 | H5CerrarTicket.jsx         | /h5/cerrar-ticket          |
 | H5HistorialCambios.jsx     | /h5/historial              |
-| H6EncuestaSatisfaccion.jsx | /h6/encuesta               |
-| H6MisEncuestas.jsx         | /h6/mis-encuestas          |
-| H6SinEncuestas.jsx         | /h6/sin-encuestas          |
-| H6SatisfaccionTecnicos.jsx | /h6/satisfaccion           |
-| H7TableroMetricas.jsx      | /h7/tablero                |
-| H7CargaTecnicos.jsx        | /h7/carga-tecnicos         |
-| H7Usuarios.jsx             | /h7/usuarios               |
-| H7FichaUsuario.jsx         | /h7/ficha-usuario          |
-| H7BloquearCuenta.jsx       | /h7/bloquear-cuenta        |
-| H7Notificaciones.jsx       | /h7/notificaciones         |
 
-La dirección / muestra el inicio. Una dirección desconocida muestra la maqueta 404. Los modales tienen su propia dirección y aparecen abiertos para revisarlos. Se incluyen H1–H7; H6 y H7 son complementarias según el documento del profesor.
+La dirección / muestra el inicio. Una dirección desconocida muestra la maqueta 404. Los modales tienen su propia dirección y aparecen abiertos para revisarlos. Se incluyen H1 a H5.
 
 ## Organización
 
@@ -82,6 +72,6 @@ La tipografía IBM Plex se sirve localmente. La fotografía de inicio se conserv
 
 ## Verificación
 
-Verificado: compilación de producción, 49 direcciones (incluido el inicio) en Chrome a 1920 × 1080 y 390 × 844, vista 404 y estructura de los 69 archivos JSX. Sin errores de consola ni desbordamiento horizontal de la página; las tablas anchas tienen desplazamiento propio.
+La aplicación incluye 39 direcciones (incluido el inicio) y una vista 404. Sin errores de consola ni desbordamiento horizontal de la página; las tablas anchas tienen desplazamiento propio.
 
 `npm run build` genera dist. La selección por camino requiere que el servidor devuelva index.html para direcciones internas, como ya hace Vite. No se incluye backend ni base de datos.

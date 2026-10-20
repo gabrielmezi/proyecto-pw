@@ -36,16 +36,6 @@ import H5DetalleAtencion from "./pages/H5DetalleAtencion";
 import H5CambiarEstado from "./pages/H5CambiarEstado";
 import H5CerrarTicket from "./pages/H5CerrarTicket";
 import H5HistorialCambios from "./pages/H5HistorialCambios";
-import H6EncuestaSatisfaccion from "./pages/H6EncuestaSatisfaccion";
-import H6MisEncuestas from "./pages/H6MisEncuestas";
-import H6SinEncuestas from "./pages/H6SinEncuestas";
-import H6SatisfaccionTecnicos from "./pages/H6SatisfaccionTecnicos";
-import H7TableroMetricas from "./pages/H7TableroMetricas";
-import H7CargaTecnicos from "./pages/H7CargaTecnicos";
-import H7Usuarios from "./pages/H7Usuarios";
-import H7FichaUsuario from "./pages/H7FichaUsuario";
-import H7BloquearCuenta from "./pages/H7BloquearCuenta";
-import H7Notificaciones from "./pages/H7Notificaciones";
 
 // Única selección de presentación: cambiar la URL y recargar. Sin router ni estado.
 export default function App() {
@@ -128,26 +118,6 @@ export default function App() {
       return <H5CerrarTicket />;
     case "/h5/historial":
       return <H5HistorialCambios />;
-    case "/h6/encuesta":
-      return <H6EncuestaSatisfaccion />;
-    case "/h6/mis-encuestas":
-      return <H6MisEncuestas />;
-    case "/h6/sin-encuestas":
-      return <H6SinEncuestas />;
-    case "/h6/satisfaccion":
-      return <H6SatisfaccionTecnicos />;
-    case "/h7/tablero":
-      return <H7TableroMetricas />;
-    case "/h7/carga-tecnicos":
-      return <H7CargaTecnicos />;
-    case "/h7/usuarios":
-      return <H7Usuarios />;
-    case "/h7/ficha-usuario":
-      return <H7FichaUsuario />;
-    case "/h7/bloquear-cuenta":
-      return <H7BloquearCuenta />;
-    case "/h7/notificaciones":
-      return <H7Notificaciones />;
     default:
       return <H1PaginaNoEncontrada />;
   }

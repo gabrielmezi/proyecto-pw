@@ -52,7 +52,9 @@ export default function H3NuevoTicket() {
                   valor="A-201"
                   ayuda="Aula · Pabellón A · piso 2"
                 />
-                <PrioridadSugerida />
+                <PrioridadSugerida 
+                  prioridad= "Crítica"
+                />
               </div>
               <Campo
                 titulo="ASUNTO"
@@ -97,3 +99,5 @@ export default function H3NuevoTicket() {
     </UsuarioLayout>
   );
 }
+
+

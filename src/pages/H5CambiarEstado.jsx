@@ -13,11 +13,11 @@ export default function H5CambiarEstado() {
         <input type="radio" name="estado" defaultChecked />
         En espera · falta un repuesto o depende de un tercero
       </label>
-      <label className="min-h-10 w-full rounded-sm border border-border bg-white px-3 py-2 text-[15px] text-ink aria-invalid:border-danger flex gap-3">
+      <label className="min-h-10 w-full rounded-sm border border-border bg-white px-3 py-2 text-[15px] text-ink flex gap-3">
         <input type="radio" name="estado" />
         Resuelto · la falla ya no se presenta
       </label>
-      <label className="min-h-10 w-full rounded-sm border border-border bg-white px-3 py-2 text-[15px] aria-invalid:border-danger flex gap-3 text-muted">
+      <label className="min-h-10 w-full rounded-sm border border-border bg-white px-3 py-2 text-[15px] flex gap-3 text-muted">
         <input type="radio" name="estado" disabled />
         Abierto · no disponible desde En atención
       </label>

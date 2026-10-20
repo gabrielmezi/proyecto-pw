@@ -10,13 +10,12 @@ export default function PublicoLayout({ children }) {
             <span className="font-normal text-muted">· Campus Ulima</span>
           </strong>
           <nav
-            aria-label="Navegación pública"
             className="flex flex-wrap gap-5 text-[13px]"
           >
-            <button type="button">Inicio</button>
-            <button type="button">Cómo reportar</button>
-            <button type="button">Categorías de servicio</button>
-            <button type="button">Tiempos de atención</button>
+            <button className="enabled:hover:bg-gray-200" type="button">Inicio</button>
+            <button className="enabled:hover:bg-gray-200" type="button">Cómo reportar</button>
+            <button className="enabled:hover:bg-gray-200" type="button">Categorías de servicio</button>
+            <button className="enabled:hover:bg-gray-200" type="button">Tiempos de atención</button>
           </nav>
           <div data-acciones className="flex flex-wrap items-center gap-3 ml-auto">
             <Boton variante="secundario">Iniciar sesión</Boton>

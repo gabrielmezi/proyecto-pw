@@ -73,28 +73,28 @@ export default function H3DetalleTicket() {
           <Tarjeta titulo="Línea de tiempo">
             <ol className="flex flex-col gap-3 text-sm">
               <li className="flex items-start gap-3">
-                <span aria-hidden="true" className="mt-1 h-3 w-3 shrink-0 rounded-full bg-success" />
+                <span className="mt-1 h-3 w-3 shrink-0 rounded-full bg-success" />
                 <div>
                   <p>Abierto</p>
                   <p className="text-xs text-muted">07/09/2026 08:12 · registrado por ti</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span aria-hidden="true" className="mt-1 h-3 w-3 shrink-0 rounded-full bg-success" />
+                <span className="mt-1 h-3 w-3 shrink-0 rounded-full bg-success" />
                 <div>
                   <p>Asignado</p>
                   <p className="text-xs text-muted">07/09/2026 08:20 · Lucía Mendoza Ríos</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span aria-hidden="true" className="mt-1 h-3 w-3 shrink-0 rounded-full bg-warning" />
+                <span className="mt-1 h-3 w-3 shrink-0 rounded-full bg-warning" />
                 <div>
                   <p>En atención</p>
                   <p className="text-xs text-muted">07/09/2026 08:41 · Julio Paredes Soto</p>
                 </div>
               </li>
               <li className="flex items-start gap-3 text-muted">
-                <span aria-hidden="true" className="mt-1 h-3 w-3 shrink-0 rounded-full bg-border" />
+                <span className="mt-1 h-3 w-3 shrink-0 rounded-full bg-border" />
                 <div>
                   <p>Resuelto</p>
                   <p className="text-xs">Pendiente</p>

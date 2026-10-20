@@ -37,7 +37,6 @@ export default function H2TecnicosPorCategoria() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Julio Paredes Soto: Audiovisuales"
                 defaultChecked
                 className="h-4 w-4 accent-primary"
               />
@@ -45,14 +44,12 @@ export default function H2TecnicosPorCategoria() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Julio Paredes Soto: Climatización"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Julio Paredes Soto: Redes"
                 defaultChecked
                 className="h-4 w-4 accent-primary"
               />
@@ -60,28 +57,24 @@ export default function H2TecnicosPorCategoria() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Julio Paredes Soto: Mobiliario"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Julio Paredes Soto: Eléctrico"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Julio Paredes Soto: Limpieza"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Julio Paredes Soto: Accesos"
                 className="h-4 w-4 accent-primary"
               />
             </td>
@@ -93,7 +86,6 @@ export default function H2TecnicosPorCategoria() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Marco Huamán Vela: Audiovisuales"
                 defaultChecked
                 className="h-4 w-4 accent-primary"
               />
@@ -101,21 +93,18 @@ export default function H2TecnicosPorCategoria() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Marco Huamán Vela: Climatización"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Marco Huamán Vela: Redes"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Marco Huamán Vela: Mobiliario"
                 defaultChecked
                 className="h-4 w-4 accent-primary"
               />
@@ -123,21 +112,18 @@ export default function H2TecnicosPorCategoria() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Marco Huamán Vela: Eléctrico"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Marco Huamán Vela: Limpieza"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Marco Huamán Vela: Accesos"
                 className="h-4 w-4 accent-primary"
               />
             </td>
@@ -149,35 +135,30 @@ export default function H2TecnicosPorCategoria() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Iván Zegarra Pinto: Audiovisuales"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Iván Zegarra Pinto: Climatización"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Iván Zegarra Pinto: Redes"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Iván Zegarra Pinto: Mobiliario"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Iván Zegarra Pinto: Eléctrico"
                 defaultChecked
                 className="h-4 w-4 accent-primary"
               />
@@ -185,14 +166,12 @@ export default function H2TecnicosPorCategoria() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Iván Zegarra Pinto: Limpieza"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Iván Zegarra Pinto: Accesos"
                 defaultChecked
                 className="h-4 w-4 accent-primary"
               />
@@ -205,14 +184,12 @@ export default function H2TecnicosPorCategoria() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Sandra Nolasco Ríos: Audiovisuales"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Sandra Nolasco Ríos: Climatización"
                 defaultChecked
                 className="h-4 w-4 accent-primary"
               />
@@ -220,7 +197,6 @@ export default function H2TecnicosPorCategoria() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Sandra Nolasco Ríos: Redes"
                 defaultChecked
                 className="h-4 w-4 accent-primary"
               />
@@ -228,28 +204,24 @@ export default function H2TecnicosPorCategoria() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Sandra Nolasco Ríos: Mobiliario"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Sandra Nolasco Ríos: Eléctrico"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Sandra Nolasco Ríos: Limpieza"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Sandra Nolasco Ríos: Accesos"
                 className="h-4 w-4 accent-primary"
               />
             </td>
@@ -261,42 +233,36 @@ export default function H2TecnicosPorCategoria() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Rocío Espinoza Farfán: Audiovisuales"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Rocío Espinoza Farfán: Climatización"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Rocío Espinoza Farfán: Redes"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Rocío Espinoza Farfán: Mobiliario"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Rocío Espinoza Farfán: Eléctrico"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Rocío Espinoza Farfán: Limpieza"
                 defaultChecked
                 className="h-4 w-4 accent-primary"
               />
@@ -304,7 +270,6 @@ export default function H2TecnicosPorCategoria() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Rocío Espinoza Farfán: Accesos"
                 className="h-4 w-4 accent-primary"
               />
             </td>
@@ -316,14 +281,12 @@ export default function H2TecnicosPorCategoria() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Hernán Loayza Pomar: Audiovisuales"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Hernán Loayza Pomar: Climatización"
                 defaultChecked
                 className="h-4 w-4 accent-primary"
               />
@@ -331,35 +294,30 @@ export default function H2TecnicosPorCategoria() {
             <td>
               <input
                 type="checkbox"
-                aria-label="Hernán Loayza Pomar: Redes"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Hernán Loayza Pomar: Mobiliario"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Hernán Loayza Pomar: Eléctrico"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Hernán Loayza Pomar: Limpieza"
                 className="h-4 w-4 accent-primary"
               />
             </td>
             <td>
               <input
                 type="checkbox"
-                aria-label="Hernán Loayza Pomar: Accesos"
                 className="h-4 w-4 accent-primary"
               />
             </td>

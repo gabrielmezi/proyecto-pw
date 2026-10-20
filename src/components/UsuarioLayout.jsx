@@ -10,7 +10,6 @@ export default function UsuarioLayout({ children, pagina }) {
         </strong>
         <input
           className="min-w-0 flex-1 rounded-sm border border-white/25 bg-white/10 px-3 py-2 font-mono text-xs placeholder:text-white/80 lg:max-w-md"
-          aria-label="Buscar por código de ticket"
           placeholder="⌕ Buscar por código de ticket · TCK-2026-…"
         />
         <span className="ml-auto rounded-sm bg-white/10 px-3 py-1 text-[11px]">
@@ -28,7 +27,6 @@ export default function UsuarioLayout({ children, pagina }) {
             MIS SERVICIOS
           </p>
           <nav
-            aria-label="Navegación Usuario"
             className="grid grid-cols-2 md:block"
           >
             <BotonNavegacion activo={pagina === "inicio"}>
