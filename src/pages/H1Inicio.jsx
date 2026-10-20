@@ -8,7 +8,7 @@ export default function H1Inicio() {
     <PublicoLayout pagina="">
       <section className="rounded-sm border border-border bg-white grid gap-10 p-8 lg:grid-cols-[1.5fr_1fr]">
         <div className="max-w-xl space-y-6">
-          <p className="text-xs tracking-widest text-accent">
+          <p className="text-xs text-accent">
             INFRAESTRUCTURA Y SERVICIOS DEL CAMPUS
           </p>
           <h1 className="font-semibold text-4xl leading-tight">

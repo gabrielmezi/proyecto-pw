@@ -21,7 +21,7 @@ export default function H5DetalleAtencion() {
       </TituloPagina>
       <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,2.6fr)_minmax(260px,1fr)]">
         <div className="space-y-6">
-          <h2 className="text-xl leading-7 font-semibold mb-6">Bitácora · 6 entradas</h2>
+          <h2 className="text-xl font-semibold mb-6">Bitácora · 6 entradas</h2>
           <div className="border-l-2 border-border pl-6 [&_article]:relative [&_article]:mb-6 [&_article]:rounded-sm [&_article]:border [&_article]:border-border [&_article]:bg-white [&_article]:p-4 [&_article]:before:absolute [&_article]:before:-left-[33px] [&_article]:before:top-5 [&_article]:before:h-3 [&_article]:before:w-3 [&_article]:before:rounded-full [&_article]:before:border-2 [&_article]:before:border-primary [&_article]:before:bg-white [&_article]:before:content-['']">
             <article>
               <h3 className="text-base font-semibold">Camila Quispe Ramos</h3>
@@ -107,7 +107,7 @@ export default function H5DetalleAtencion() {
             </p>
           </Tarjeta>
           <Tarjeta titulo="Ambiente">
-            <h2 className="text-xl leading-7 font-semibold font-mono">A-201</h2>
+            <h2 className="text-xl font-semibold font-mono">A-201</h2>
             <p>Aula · Pabellón A · piso 2 · capacidad 68 · Campus Monterrico</p>
             <p>
               2 tickets abiertos en este ambiente · último cierre 28/08/2026

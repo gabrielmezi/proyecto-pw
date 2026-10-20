@@ -9,7 +9,7 @@ export default function H3TicketCerrado() {
     <UsuarioLayout pagina="mis-tickets">
       <div className="w-full max-w-md">
         <Tarjeta>
-          <h1 className="mb-4 text-sm font-medium tracking-widest text-muted">
+          <h1 className="mb-4 text-sm font-medium text-muted">
             CERRADO CON ENCUESTA PENDIENTE
           </h1>
           <div className="mb-3 flex flex-wrap items-center gap-3">

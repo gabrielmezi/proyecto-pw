@@ -12,11 +12,11 @@ export default function H4AsignarTecnico() {
           <strong>Julio Paredes Soto</strong>
           <span>8 tickets · 2 críticos</span>
         </div>
-        <div className="min-h-10 w-full rounded-sm border border-border bg-white px-3 py-2 text-[15px] tracking-normal text-ink aria-invalid:border-danger flex justify-between gap-4">
+        <div className="min-h-10 w-full rounded-sm border border-border bg-white px-3 py-2 text-[15px] text-ink aria-invalid:border-danger flex justify-between gap-4">
           <span>Marco Huamán Vela</span>
           <span>6 tickets · 0 críticos</span>
         </div>
-        <div className="min-h-10 w-full rounded-sm border border-border bg-white px-3 py-2 text-[15px] tracking-normal text-ink aria-invalid:border-danger flex justify-between gap-4">
+        <div className="min-h-10 w-full rounded-sm border border-border bg-white px-3 py-2 text-[15px] text-ink aria-invalid:border-danger flex justify-between gap-4">
           <span>Sandra Nolasco Ríos</span>
           <span>7 tickets · 1 crítico</span>
         </div>

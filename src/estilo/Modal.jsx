@@ -12,7 +12,7 @@ export default function Modal({ titulo, children, compacto = false }) {
         }
       >
         <div className="flex items-start justify-between gap-6">
-          <h2 className="text-xl leading-7 font-semibold">{titulo}</h2>
+          <h2 className="text-xl font-semibold">{titulo}</h2>
           <Boton variante="terciario">
             <span aria-hidden="true">×</span>
             <span className="sr-only">Cerrar modal</span>

@@ -38,13 +38,13 @@ export default function PublicoLayout({ children }) {
             <p>Atención de lunes a sábado, 07:00 a 21:00</p>
           </div>
           <div className="space-y-2">
-            <p className="text-xs tracking-widest text-slate-300">REPORTAR</p>
+            <p className="text-xs text-slate-300">REPORTAR</p>
             <p>Registrar un ticket</p>
             <p>Seguir un ticket</p>
             <p>Categorías de servicio</p>
           </div>
           <div className="space-y-2">
-            <p className="text-xs tracking-widest text-slate-300">AYUDA</p>
+            <p className="text-xs text-slate-300">AYUDA</p>
             <p>Preguntas frecuentes</p>
             <p>Tiempos de atención esperados</p>
             <p>Emergencias eléctricas · anexo 30111</p>

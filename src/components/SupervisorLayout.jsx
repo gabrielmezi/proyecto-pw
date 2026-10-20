@@ -13,18 +13,18 @@ export default function SupervisorLayout({ children, pagina }) {
           aria-label="Buscar por código de ticket"
           placeholder="⌕ Buscar por código de ticket · TCK-2026-…"
         />
-        <span className="ml-auto rounded-sm bg-white/10 px-3 py-1 text-[11px] tracking-wide">
+        <span className="ml-auto rounded-sm bg-white/10 px-3 py-1 text-[11px]">
           COLA SIN ASIGNAR · 9
         </span>
         <div className="text-right text-xs">
           Lucía Mendoza Ríos
-          <p className="text-[10px] tracking-widest">SUPERVISOR</p>
+          <p className="text-[10px]">SUPERVISOR</p>
         </div>
         <span className="rounded-sm bg-accent p-2 text-xs">LM</span>
       </header>
       <div className="flex flex-1 flex-col md:flex-row">
         <aside className="flex shrink-0 flex-col border-r border-border bg-white p-3 md:w-[236px]">
-          <p className="px-3 py-3 text-[11px] tracking-widest text-muted">
+          <p className="px-3 py-3 text-[11px] text-muted">
             SUPERVISIÓN
           </p>
           <nav
@@ -59,7 +59,7 @@ export default function SupervisorLayout({ children, pagina }) {
               Usuarios<span className="rounded-sm border border-border bg-background px-1 text-[11px]">15</span>
             </BotonNavegacion>
           </nav>
-          <div className="mt-auto border-t border-border pt-2 md:mt-auto">
+          <div className="mt-auto border-t border-border pt-2">
             <BotonNavegacion>
               Mi cuenta
             </BotonNavegacion>
