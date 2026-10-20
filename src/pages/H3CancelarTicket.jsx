@@ -5,8 +5,7 @@ export default function H3CancelarTicket() {
   return (
     <Modal titulo="Cancelar TCK-2026-00147">
       <p>
-        Este ticket aún no tiene un técnico asignado. ¿Confirmas que deseas
-        cancelarlo?
+        ¿Seguro que desea cancelar ticket?
       </p>
       <div data-acciones className="flex flex-wrap items-center gap-3">
         <Boton variante="secundario">Volver</Boton>

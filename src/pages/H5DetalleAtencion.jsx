@@ -43,7 +43,7 @@ export default function H5DetalleAtencion() {
                 inicio de la clase de 10:00.
               </p>
             </article>
-            <article className="bg-amber-50!">
+            <article className="bg-[#FBF3E2]!">
               <h3 className="text-base font-semibold">Julio Paredes Soto</h3>
               <p className="mb-3 text-xs text-warning">
                 Técnico · 07/09/2026 08:41 · NOTA INTERNA · NO VISIBLE PARA EL

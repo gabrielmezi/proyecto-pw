@@ -1,5 +1,7 @@
 ﻿import H3BitacoraAtencion from "./H3BitacoraAtencion";
 import Boton from "../estilo/Boton";
+import AreaTexto from "../estilo/AreaTexto";
+import Tarjeta from "../estilo/Tarjeta";
 import Etiqueta from "../estilo/Etiqueta";
 import UsuarioLayout from "../components/UsuarioLayout";
 
@@ -14,39 +16,32 @@ export default function H3DetalleTicket() {
           <h1 className="font-mono text-2xl font-semibold text-primary">TCK-2026-00147</h1>
           <Etiqueta tono="danger">Crítica</Etiqueta>
           <Etiqueta tono="warning">En atención</Etiqueta>
-          <a
-            href="#informacion-complementaria"
-            className="ml-auto inline-flex min-h-10 items-center justify-center rounded-sm border border-primary px-4 py-2 text-sm text-primary transition hover:bg-blue-50"
-          >
-            Agregar información
-          </a>
+          <div className="ml-auto">
+            <Boton variante="secundario">Agregar información</Boton>
+          </div>
         </div>
         <h2 className="mt-5 text-lg font-semibold">Proyector no enciende en aula A-201</h2>
       </header>
 
       <div className="flex flex-col items-start gap-6 lg:flex-row">
-        <section className="w-full min-w-0 rounded-sm border border-border bg-white p-6 lg:flex-1">
-          <h2 className="mb-4 text-lg font-semibold">Bitácora de la atención</h2>
-          <H3BitacoraAtencion />
-          <div className="mt-4 border-t border-border pt-4">
-            <label htmlFor="informacion-complementaria" className="mb-2 block text-xs tracking-wide text-muted">
-              AGREGAR INFORMACIÓN
-            </label>
-            <textarea
-              id="informacion-complementaria"
-              className="block min-h-28 w-full scroll-mt-6 resize-y rounded-sm border border-border bg-white px-3 py-2 text-sm placeholder:text-muted focus:border-primary"
-              placeholder="Escribe aquí si tienes un dato nuevo que ayude al técnico..."
-            />
-            <div className="mt-3 flex flex-wrap items-center gap-3">
-              <Boton variante="primario">Enviar comentario</Boton>
-              <p className="text-xs text-muted">Las notas internas del equipo técnico no se muestran aquí.</p>
+        <div className="w-full min-w-0 lg:flex-1">
+          <Tarjeta titulo="Bitácora de la atención">
+            <H3BitacoraAtencion />
+            <div className="mt-4 border-t border-border pt-4">
+              <AreaTexto
+                titulo="AGREGAR INFORMACIÓN"
+                placeholder="Escribe aquí si tienes un dato nuevo que ayude al técnico..."
+              />
+              <div className="mt-3 flex flex-wrap items-center gap-3">
+                <Boton variante="primario">Enviar comentario</Boton>
+                <p className="text-xs text-muted">Las notas internas del equipo técnico no se muestran aquí.</p>
+              </div>
             </div>
-          </div>
-        </section>
+          </Tarjeta>
+        </div>
 
         <aside className="flex w-full shrink-0 flex-col gap-4 lg:w-80 xl:w-96">
-          <section className="rounded-sm border border-border bg-white p-6">
-            <h2 className="mb-3 text-lg font-semibold">Datos del reporte</h2>
+          <Tarjeta titulo="Datos del reporte">
             <dl className="text-sm">
               <div className="flex justify-between gap-3 border-b border-border py-2">
                 <dt className="shrink-0 text-muted">Categoría</dt>
@@ -73,10 +68,9 @@ export default function H3DetalleTicket() {
                 <dd className="text-right">Antes de 10:12</dd>
               </div>
             </dl>
-          </section>
+          </Tarjeta>
 
-          <section className="rounded-sm border border-border bg-white p-6">
-            <h2 className="mb-4 text-lg font-semibold">Línea de tiempo</h2>
+          <Tarjeta titulo="Línea de tiempo">
             <ol className="flex flex-col gap-3 text-sm">
               <li className="flex items-start gap-3">
                 <span aria-hidden="true" className="mt-1 h-3 w-3 shrink-0 rounded-full bg-success" />
@@ -107,7 +101,7 @@ export default function H3DetalleTicket() {
                 </div>
               </li>
             </ol>
-          </section>
+          </Tarjeta>
         </aside>
       </div>
     </UsuarioLayout>
