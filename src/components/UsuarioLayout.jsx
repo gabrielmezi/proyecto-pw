@@ -29,13 +29,13 @@ export default function UsuarioLayout({ children, pagina }) {
           <nav
             className="grid grid-cols-2 md:block"
           >
-            <BotonNavegacion activo={pagina === "inicio"}>
+            <BotonNavegacion to="/" activo={pagina === "inicio"}>
               Inicio
             </BotonNavegacion>
-            <BotonNavegacion activo={pagina === "nuevo-ticket"}>
+            <BotonNavegacion to="/h3/nuevo-ticket" activo={pagina === "nuevo-ticket"}>
               Nuevo ticket
             </BotonNavegacion>
-            <BotonNavegacion activo={pagina === "mis-tickets"}>
+            <BotonNavegacion to="/h3/mis-tickets" activo={pagina === "mis-tickets"}>
               Mis tickets<span className="rounded-sm border border-border bg-background px-1 text-[11px]">12</span>
             </BotonNavegacion>
             <BotonNavegacion activo={pagina === "encuesta"}>
@@ -44,15 +44,15 @@ export default function UsuarioLayout({ children, pagina }) {
             <BotonNavegacion activo={pagina === "mis-encuestas"}>
               Mis encuestas<span className="rounded-sm border border-border bg-background px-1 text-[11px]">7</span>
             </BotonNavegacion>
-            <BotonNavegacion activo={pagina === "cuenta"}>
+            <BotonNavegacion to="/h1/mi-cuenta" activo={pagina === "cuenta"}>
               Mi cuenta
             </BotonNavegacion>
           </nav>
           <div className="mt-auto border-t border-border pt-2">
-            <BotonNavegacion>
+            <BotonNavegacion to="/h1/mi-cuenta">
               Mi cuenta
             </BotonNavegacion>
-            <BotonNavegacion>
+            <BotonNavegacion to="/h1/iniciar-sesion">
               Cerrar sesión
             </BotonNavegacion>
           </div>

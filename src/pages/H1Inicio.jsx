@@ -21,7 +21,7 @@ export default function H1Inicio() {
             mismo día.
           </p>
           <div data-acciones className="flex flex-wrap items-center gap-3">
-            <Boton variante="primario">Registrar un ticket</Boton>
+            <Boton to="/h3/nuevo-ticket" variante="primario">Registrar un ticket</Boton>
             <Boton variante="secundario">Ver cómo reportar</Boton>
           </div>
         </div>

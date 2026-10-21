@@ -60,7 +60,7 @@ export default function H1Registro() {
               </label>
               <div data-acciones className="flex flex-wrap items-center gap-3">
                 <Boton variante="primario">Crear cuenta</Boton>
-                <Boton variante="secundario">Cancelar</Boton>
+                <Boton to="/h1/iniciar-sesion" variante="secundario">Cancelar</Boton>
               </div>
             </Tarjeta>
           </div>

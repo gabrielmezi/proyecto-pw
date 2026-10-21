@@ -25,13 +25,13 @@ export default function H1IniciarSesion() {
               />
               Recordarme en este equipo
             </label>
-            <Boton variante="terciario">¿Olvidaste tu contraseña?</Boton>
+            <Boton to="/h1/recuperar-contrasena" variante="terciario">¿Olvidaste tu contraseña?</Boton>
           </div>
           <div className="grid">
             <Boton variante="primario">Ingresar</Boton>
           </div>
           <p className="text-center text-[13px]">
-            ¿No tienes cuenta? <Boton variante="terciario">Regístrate</Boton>
+            ¿No tienes cuenta? <Boton to="/h1/registro" variante="terciario">Regístrate</Boton>
           </p>
         </Tarjeta>
         <aside className="space-y-4">

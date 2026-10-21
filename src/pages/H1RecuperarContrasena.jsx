@@ -8,7 +8,7 @@ export default function H1RecuperarContrasena() {
     <PublicoLayout pagina="">
       <div className="mx-auto w-full max-w-[680px]">
         <p className="mb-8 text-primary">
-          ① Tu correo　　② Enlace enviado　　③ Nueva contraseña
+          ① Tu correo  ② Enlace enviado  ③ Nueva contraseña
         </p>
         <Tarjeta titulo="Recuperar mi contraseña">
           <p>

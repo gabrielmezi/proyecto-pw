@@ -29,10 +29,10 @@ export default function TecnicoLayout({ children, pagina }) {
           <nav
             className="grid grid-cols-2 md:block"
           >
-            <BotonNavegacion activo={pagina === "bandeja"}>
+            <BotonNavegacion to="/h4/bandeja-tecnico" activo={pagina === "bandeja"}>
               Mi bandeja<span className="rounded-sm border border-border bg-background px-1 text-[11px]">8</span>
             </BotonNavegacion>
-            <BotonNavegacion activo={pagina === "atencion"}>
+            <BotonNavegacion to="/h5/detalle-atencion" activo={pagina === "atencion"}>
               En atención<span className="rounded-sm border border-border bg-background px-1 text-[11px]">3</span>
             </BotonNavegacion>
             <BotonNavegacion activo={pagina === "espera"}>
@@ -41,18 +41,18 @@ export default function TecnicoLayout({ children, pagina }) {
             <BotonNavegacion activo={pagina === "resueltos"}>
               Resueltos hoy<span className="rounded-sm border border-border bg-background px-1 text-[11px]">2</span>
             </BotonNavegacion>
-            <BotonNavegacion activo={pagina === "historial"}>
+            <BotonNavegacion to="/h5/historial" activo={pagina === "historial"}>
               Historial
             </BotonNavegacion>
-            <BotonNavegacion activo={pagina === "cuenta"}>
+            <BotonNavegacion to="/h1/mi-cuenta" activo={pagina === "cuenta"}>
               Mi cuenta
             </BotonNavegacion>
           </nav>
           <div className="mt-auto border-t border-border pt-2">
-            <BotonNavegacion>
+            <BotonNavegacion to="/h1/mi-cuenta">
               Mi cuenta
             </BotonNavegacion>
-            <BotonNavegacion>
+            <BotonNavegacion to="/h1/iniciar-sesion">
               Cerrar sesión
             </BotonNavegacion>
           </div>

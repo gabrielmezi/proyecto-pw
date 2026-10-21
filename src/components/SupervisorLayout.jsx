@@ -32,19 +32,19 @@ export default function SupervisorLayout({ children, pagina }) {
             <BotonNavegacion activo={pagina === "tablero"}>
               Tablero
             </BotonNavegacion>
-            <BotonNavegacion activo={pagina === "cola"}>
+            <BotonNavegacion to="/h4/cola" activo={pagina === "cola"}>
               Cola de atención<span className="rounded-sm border border-border bg-background px-1 text-[11px]">24</span>
             </BotonNavegacion>
-            <BotonNavegacion activo={pagina === "bandejas"}>
+            <BotonNavegacion to="/h4/bandeja-tecnico" activo={pagina === "bandejas"}>
               Bandejas de técnicos<span className="rounded-sm border border-border bg-background px-1 text-[11px]">6</span>
             </BotonNavegacion>
-            <BotonNavegacion activo={pagina === "categorias"}>
+            <BotonNavegacion to="/h2/categorias" activo={pagina === "categorias"}>
               Categorías<span className="rounded-sm border border-border bg-background px-1 text-[11px]">7</span>
             </BotonNavegacion>
-            <BotonNavegacion activo={pagina === "ambientes"}>
+            <BotonNavegacion to="/h2/ambientes" activo={pagina === "ambientes"}>
               Sedes y ambientes<span className="rounded-sm border border-border bg-background px-1 text-[11px]">48</span>
             </BotonNavegacion>
-            <BotonNavegacion activo={pagina === "tecnicos"}>
+            <BotonNavegacion to="/h2/tecnicos-por-categoria" activo={pagina === "tecnicos"}>
               Técnicos por categoría
             </BotonNavegacion>
             <BotonNavegacion activo={pagina === "satisfaccion"}>
@@ -58,10 +58,10 @@ export default function SupervisorLayout({ children, pagina }) {
             </BotonNavegacion>
           </nav>
           <div className="mt-auto border-t border-border pt-2">
-            <BotonNavegacion>
+            <BotonNavegacion to="/h1/mi-cuenta">
               Mi cuenta
             </BotonNavegacion>
-            <BotonNavegacion>
+            <BotonNavegacion to="/h1/iniciar-sesion">
               Cerrar sesión
             </BotonNavegacion>
           </div>

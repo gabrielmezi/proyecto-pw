@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import Boton from "../estilo/Boton";
 export default function PublicoLayout({ children }) {
   return (
@@ -12,14 +13,14 @@ export default function PublicoLayout({ children }) {
           <nav
             className="flex flex-wrap gap-5 text-[13px]"
           >
-            <button className="enabled:hover:bg-gray-200" type="button">Inicio</button>
+            <Link className="hover:bg-gray-200" to="/">Inicio</Link>
             <button className="enabled:hover:bg-gray-200" type="button">Cómo reportar</button>
             <button className="enabled:hover:bg-gray-200" type="button">Categorías de servicio</button>
             <button className="enabled:hover:bg-gray-200" type="button">Tiempos de atención</button>
           </nav>
           <div data-acciones className="flex flex-wrap items-center gap-3 ml-auto">
-            <Boton variante="secundario">Iniciar sesión</Boton>
-            <Boton variante="primario">Registrarme</Boton>
+            <Boton to="/h1/iniciar-sesion" variante="secundario">Iniciar sesión</Boton>
+            <Boton to="/h1/registro" variante="primario">Registrarme</Boton>
           </div>
         </div>
       </header>
