@@ -1,5 +1,7 @@
+import { useNavigate } from "react-router";
 import Etiqueta from "../estilo/Etiqueta";
 export default function TablaTickets({ prioridades = true }) {
+  const navigate = useNavigate();
   return (
     <div className="overflow-x-auto rounded-t-sm border border-border bg-white">
       <table className="w-full min-w-[1000px] text-left text-[13px]">
@@ -18,9 +20,9 @@ export default function TablaTickets({ prioridades = true }) {
       <tbody>
         <tr className={prioridades ? "border-l-[3px] border-danger" : ""}>
           <td className="h-10 border-t border-border px-3 py-1 whitespace-nowrap font-medium">
-            <span className="whitespace-nowrap font-mono text-xs text-primary">
+            <button type="button" onClick={() => navigate("/h3/detalle-ticket")} className="whitespace-nowrap font-mono text-xs text-primary">
               TCK-2026-00147
-            </span>
+            </button>
           </td>
           <td className="h-10 border-t border-border px-3 py-1 w-[29%]">Proyector no enciende en aula</td>
           <td className="h-10 border-t border-border px-3 py-1 text-xs text-muted">Audiovisuales · Proyector no enciende</td>
@@ -35,9 +37,9 @@ export default function TablaTickets({ prioridades = true }) {
         </tr>
         <tr className={prioridades ? "border-l-[3px] border-danger" : ""}>
           <td className="h-10 border-t border-border px-3 py-1 whitespace-nowrap font-medium">
-            <span className="whitespace-nowrap font-mono text-xs text-primary">
+            <button type="button" onClick={() => navigate("/h3/detalle-ticket")} className="whitespace-nowrap font-mono text-xs text-primary">
               TCK-2026-00146
-            </span>
+            </button>
           </td>
           <td className="h-10 border-t border-border px-3 py-1 w-[29%]">Punto de red caído en laboratorio</td>
           <td className="h-10 border-t border-border px-3 py-1 text-xs text-muted">Redes y conectividad · Punto de red caído</td>
@@ -52,9 +54,9 @@ export default function TablaTickets({ prioridades = true }) {
         </tr>
         <tr className={prioridades ? "border-l-[3px] border-accent" : ""}>
           <td className="h-10 border-t border-border px-3 py-1 whitespace-nowrap font-medium">
-            <span className="whitespace-nowrap font-mono text-xs text-primary">
+            <button type="button" onClick={() => navigate("/h3/detalle-ticket")} className="whitespace-nowrap font-mono text-xs text-primary">
               TCK-2026-00145
-            </span>
+            </button>
           </td>
           <td className="h-10 border-t border-border px-3 py-1 w-[29%]">Aire acondicionado sin frío</td>
           <td className="h-10 border-t border-border px-3 py-1 text-xs text-muted">Climatización · Aire sin frío</td>
@@ -69,9 +71,9 @@ export default function TablaTickets({ prioridades = true }) {
         </tr>
         <tr className={prioridades ? "border-l-[3px] border-accent" : ""}>
           <td className="h-10 border-t border-border px-3 py-1 whitespace-nowrap font-medium">
-            <span className="whitespace-nowrap font-mono text-xs text-primary">
+            <button type="button" onClick={() => navigate("/h3/detalle-ticket")} className="whitespace-nowrap font-mono text-xs text-primary">
               TCK-2026-00144
-            </span>
+            </button>
           </td>
           <td className="h-10 border-t border-border px-3 py-1 w-[29%]">Tomacorriente sin energía</td>
           <td className="h-10 border-t border-border px-3 py-1 text-xs text-muted">Eléctrico · Tomacorriente sin energía</td>
@@ -86,9 +88,9 @@ export default function TablaTickets({ prioridades = true }) {
         </tr>
         <tr className={prioridades ? "border-l-[3px] border-warning" : ""}>
           <td className="h-10 border-t border-border px-3 py-1 whitespace-nowrap font-medium">
-            <span className="whitespace-nowrap font-mono text-xs text-primary">
+            <button type="button" onClick={() => navigate("/h3/detalle-ticket")} className="whitespace-nowrap font-mono text-xs text-primary">
               TCK-2026-00143
-            </span>
+            </button>
           </td>
           <td className="h-10 border-t border-border px-3 py-1 w-[29%]">Imagen distorsionada del proyector</td>
           <td className="h-10 border-t border-border px-3 py-1 text-xs text-muted">Audiovisuales · Imagen distorsionada</td>
@@ -103,9 +105,9 @@ export default function TablaTickets({ prioridades = true }) {
         </tr>
         <tr className={prioridades ? "border-l-[3px] border-accent" : ""}>
           <td className="h-10 border-t border-border px-3 py-1 whitespace-nowrap font-medium">
-            <span className="whitespace-nowrap font-mono text-xs text-primary">
+            <button type="button" onClick={() => navigate("/h3/detalle-ticket")} className="whitespace-nowrap font-mono text-xs text-primary">
               TCK-2026-00142
-            </span>
+            </button>
           </td>
           <td className="h-10 border-t border-border px-3 py-1 w-[29%]">Chapa de puerta trabada</td>
           <td className="h-10 border-t border-border px-3 py-1 text-xs text-muted">Accesos y cerraduras · Chapa trabada</td>
@@ -120,9 +122,9 @@ export default function TablaTickets({ prioridades = true }) {
         </tr>
         <tr className={prioridades ? "border-l-[3px] border-warning" : ""}>
           <td className="h-10 border-t border-border px-3 py-1 whitespace-nowrap font-medium">
-            <span className="whitespace-nowrap font-mono text-xs text-primary">
+            <button type="button" onClick={() => navigate("/h3/detalle-ticket")} className="whitespace-nowrap font-mono text-xs text-primary">
               TCK-2026-00141
-            </span>
+            </button>
           </td>
           <td className="h-10 border-t border-border px-3 py-1 w-[29%]">Cinco sillas rotas en aula</td>
           <td className="h-10 border-t border-border px-3 py-1 text-xs text-muted">Mobiliario · Silla rota</td>
@@ -137,9 +139,9 @@ export default function TablaTickets({ prioridades = true }) {
         </tr>
         <tr className={prioridades ? "border-l-[3px] border-danger" : ""}>
           <td className="h-10 border-t border-border px-3 py-1 whitespace-nowrap font-medium">
-            <span className="whitespace-nowrap font-mono text-xs text-primary">
+            <button type="button" onClick={() => navigate("/h3/detalle-ticket")} className="whitespace-nowrap font-mono text-xs text-primary">
               TCK-2026-00140
-            </span>
+            </button>
           </td>
           <td className="h-10 border-t border-border px-3 py-1 w-[29%]">Fuga de agua en baño de damas</td>
           <td className="h-10 border-t border-border px-3 py-1 text-xs text-muted">Limpieza · Fuga de agua</td>

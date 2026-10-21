@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router";
 import BotonNavegacion from "../estilo/BotonNavegacion";
 
 export default function SupervisorLayout({ children, pagina }) {
+  const navigate = useNavigate();
   return (
     <div className="flex min-h-screen flex-col" data-pagina={pagina}>
        <header className="flex min-h-[60px] flex-wrap items-center gap-5 bg-primary px-6 py-3 text-white">
@@ -32,19 +34,19 @@ export default function SupervisorLayout({ children, pagina }) {
             <BotonNavegacion activo={pagina === "tablero"}>
               Tablero
             </BotonNavegacion>
-            <BotonNavegacion to="/h4/cola" activo={pagina === "cola"}>
+            <BotonNavegacion onClick={() => navigate("/h4/cola")} activo={pagina === "cola"}>
               Cola de atención<span className="rounded-sm border border-border bg-background px-1 text-[11px]">24</span>
             </BotonNavegacion>
-            <BotonNavegacion to="/h4/bandeja-tecnico" activo={pagina === "bandejas"}>
+            <BotonNavegacion onClick={() => navigate("/h4/bandeja-tecnico")} activo={pagina === "bandejas"}>
               Bandejas de técnicos<span className="rounded-sm border border-border bg-background px-1 text-[11px]">6</span>
             </BotonNavegacion>
-            <BotonNavegacion to="/h2/categorias" activo={pagina === "categorias"}>
+            <BotonNavegacion onClick={() => navigate("/h2/categorias")} activo={pagina === "categorias"}>
               Categorías<span className="rounded-sm border border-border bg-background px-1 text-[11px]">7</span>
             </BotonNavegacion>
-            <BotonNavegacion to="/h2/ambientes" activo={pagina === "ambientes"}>
+            <BotonNavegacion onClick={() => navigate("/h2/ambientes")} activo={pagina === "ambientes"}>
               Sedes y ambientes<span className="rounded-sm border border-border bg-background px-1 text-[11px]">48</span>
             </BotonNavegacion>
-            <BotonNavegacion to="/h2/tecnicos-por-categoria" activo={pagina === "tecnicos"}>
+            <BotonNavegacion onClick={() => navigate("/h2/tecnicos-por-categoria")} activo={pagina === "tecnicos"}>
               Técnicos por categoría
             </BotonNavegacion>
             <BotonNavegacion activo={pagina === "satisfaccion"}>
@@ -58,10 +60,10 @@ export default function SupervisorLayout({ children, pagina }) {
             </BotonNavegacion>
           </nav>
           <div className="mt-auto border-t border-border pt-2">
-            <BotonNavegacion to="/h1/mi-cuenta">
+            <BotonNavegacion onClick={() => navigate("/h1/mi-cuenta")} >
               Mi cuenta
             </BotonNavegacion>
-            <BotonNavegacion to="/h1/iniciar-sesion">
+            <BotonNavegacion onClick={() => navigate("/h1/iniciar-sesion")} >
               Cerrar sesión
             </BotonNavegacion>
           </div>

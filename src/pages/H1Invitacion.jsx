@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import Boton from "../estilo/Boton";
 import Campo from "../estilo/Campo";
 import Etiqueta from "../estilo/Etiqueta";
@@ -5,6 +6,7 @@ import Tarjeta from "../estilo/Tarjeta";
 import PublicoLayout from "../components/PublicoLayout";
 
 export default function H1Invitacion() {
+  const navigate = useNavigate();
   return (
     <PublicoLayout pagina="">
       <div className="mx-auto w-full max-w-[950px]">
@@ -74,8 +76,8 @@ export default function H1Invitacion() {
             </label>
           </div>
           <div data-acciones className="flex flex-wrap items-center gap-3">
-            <Boton variante="primario">Activar mi cuenta</Boton>
-            <Boton variante="terciario">Rechazar invitación</Boton>
+            <Boton onClick={() => navigate("/h1/iniciar-sesion")} variante="primario">Activar mi cuenta</Boton>
+            <Boton onClick={() => navigate("/")} variante="terciario">Rechazar invitación</Boton>
           </div>
         </Tarjeta>
       </div>

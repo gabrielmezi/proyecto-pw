@@ -1,7 +1,9 @@
+import { useNavigate } from "react-router";
 import Boton from "../estilo/Boton";
 import UsuarioLayout from "../components/UsuarioLayout";
 
 export default function H1AccesoDenegado() {
+  const navigate = useNavigate();
   return (
     <UsuarioLayout pagina="inicio">
       <div className="mx-auto mt-24 max-w-2xl rounded-sm border border-border bg-white p-10 text-center">
@@ -17,7 +19,7 @@ export default function H1AccesoDenegado() {
           acceso, solicítalo a Infraestructura y Servicios.
         </p>
         <div data-acciones className="mt-6 flex flex-wrap items-center justify-center gap-3">
-          <Boton variante="primario">Ir a mis tickets</Boton>
+          <Boton onClick={() => navigate("/h3/mis-tickets")} variante="primario">Ir a mis tickets</Boton>
           <Boton variante="secundario">Solicitar acceso</Boton>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import Boton from "../estilo/Boton";
 import Campo from "../estilo/Campo";
 import Selector from "../estilo/Selector";
@@ -5,6 +6,7 @@ import Tarjeta from "../estilo/Tarjeta";
 import PublicoLayout from "../components/PublicoLayout";
 
 export default function H1Registro() {
+  const navigate = useNavigate();
   return (
     <PublicoLayout pagina="">
       <div className="mx-auto grid w-full max-w-[1200px] items-start gap-6 lg:grid-cols-[minmax(0,2.6fr)_minmax(260px,1fr)]">
@@ -65,8 +67,8 @@ export default function H1Registro() {
             Acepto los términos del servicio y la política de privacidad.
           </label>
           <div data-acciones className="flex flex-wrap items-center gap-3">
-            <Boton variante="primario">Crear cuenta</Boton>
-            <Boton to="/h1/iniciar-sesion" variante="secundario">Cancelar</Boton>
+            <Boton onClick={() => navigate("/h1/iniciar-sesion")} variante="primario">Crear cuenta</Boton>
+            <Boton onClick={() => navigate("/h1/iniciar-sesion")} variante="secundario">Cancelar</Boton>
           </div>
         </Tarjeta>
         <aside>

@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import Boton from "../estilo/Boton";
 import AreaTexto from "../estilo/AreaTexto";
 import Etiqueta from "../estilo/Etiqueta";
@@ -7,6 +8,7 @@ import TituloPagina from "../estilo/TituloPagina";
 import TecnicoLayout from "../components/TecnicoLayout";
 
 export default function H5DetalleAtencion() {
+  const navigate = useNavigate();
   return (
     <TecnicoLayout pagina="bandeja">
       <TituloPagina
@@ -15,9 +17,9 @@ export default function H5DetalleAtencion() {
       >
         <Etiqueta tono="danger">Crítica</Etiqueta>
         <Etiqueta tono="warning">En atención</Etiqueta>
-        <Boton variante="secundario">Cambiar estado</Boton>
-        <Boton variante="primario">Cerrar ticket</Boton>
-        <Boton variante="secundario">Historial</Boton>
+        <Boton onClick={() => navigate("/h5/cambiar-estado")} variante="secundario">Cambiar estado</Boton>
+        <Boton onClick={() => navigate("/h5/cerrar-ticket")} variante="primario">Cerrar ticket</Boton>
+        <Boton onClick={() => navigate("/h5/historial")} variante="secundario">Historial</Boton>
       </TituloPagina>
       <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,2.6fr)_minmax(260px,1fr)]">
         <div className="space-y-6">

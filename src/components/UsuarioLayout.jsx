@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router";
 import BotonNavegacion from "../estilo/BotonNavegacion";
 
 export default function UsuarioLayout({ children, pagina }) {
+  const navigate = useNavigate();
   return (
     <div className="flex min-h-screen flex-col" data-pagina={pagina}>
       <header className="flex min-h-[60px] flex-wrap items-center gap-5 bg-primary px-6 py-3 text-white">
@@ -29,13 +31,13 @@ export default function UsuarioLayout({ children, pagina }) {
           <nav
             className="grid grid-cols-2 md:block"
           >
-            <BotonNavegacion to="/" activo={pagina === "inicio"}>
+            <BotonNavegacion onClick={() => navigate("/")} activo={pagina === "inicio"}>
               Inicio
             </BotonNavegacion>
-            <BotonNavegacion to="/h3/nuevo-ticket" activo={pagina === "nuevo-ticket"}>
+            <BotonNavegacion onClick={() => navigate("/h3/nuevo-ticket")} activo={pagina === "nuevo-ticket"}>
               Nuevo ticket
             </BotonNavegacion>
-            <BotonNavegacion to="/h3/mis-tickets" activo={pagina === "mis-tickets"}>
+            <BotonNavegacion onClick={() => navigate("/h3/mis-tickets")} activo={pagina === "mis-tickets"}>
               Mis tickets<span className="rounded-sm border border-border bg-background px-1 text-[11px]">12</span>
             </BotonNavegacion>
             <BotonNavegacion activo={pagina === "encuesta"}>
@@ -44,15 +46,15 @@ export default function UsuarioLayout({ children, pagina }) {
             <BotonNavegacion activo={pagina === "mis-encuestas"}>
               Mis encuestas<span className="rounded-sm border border-border bg-background px-1 text-[11px]">7</span>
             </BotonNavegacion>
-            <BotonNavegacion to="/h1/mi-cuenta" activo={pagina === "cuenta"}>
+            <BotonNavegacion onClick={() => navigate("/h1/mi-cuenta")} activo={pagina === "cuenta"}>
               Mi cuenta
             </BotonNavegacion>
           </nav>
           <div className="mt-auto border-t border-border pt-2">
-            <BotonNavegacion to="/h1/mi-cuenta">
+            <BotonNavegacion onClick={() => navigate("/h1/mi-cuenta")} >
               Mi cuenta
             </BotonNavegacion>
-            <BotonNavegacion to="/h1/iniciar-sesion">
+            <BotonNavegacion onClick={() => navigate("/h1/iniciar-sesion")} >
               Cerrar sesión
             </BotonNavegacion>
           </div>

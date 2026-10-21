@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router";
 import Boton from "../estilo/Boton";
 import Campo from "../estilo/Campo";
 import Tarjeta from "../estilo/Tarjeta";
 import PublicoLayout from "../components/PublicoLayout";
 
 export default function H1NuevaContrasena() {
+  const navigate = useNavigate();
   return (
     <PublicoLayout pagina="">
       <div className="mx-auto w-full max-w-md">
@@ -18,7 +20,7 @@ export default function H1NuevaContrasena() {
           </div>
           <Campo titulo="CONFIRMAR" tipo="password" valor="Contrasena1" />
           <div className="grid">
-            <Boton variante="primario">Guardar contraseña</Boton>
+            <Boton onClick={() => navigate("/h1/iniciar-sesion")} variante="primario">Guardar contraseña</Boton>
           </div>
         </Tarjeta>
       </div>

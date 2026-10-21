@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import Boton from "../estilo/Boton";
 import Campo from "../estilo/Campo";
 import Aviso from "../estilo/Aviso";
@@ -5,6 +6,7 @@ import Tarjeta from "../estilo/Tarjeta";
 import PublicoLayout from "../components/PublicoLayout";
 
 export default function H1IniciarSesion() {
+  const navigate = useNavigate();
   return (
     <PublicoLayout pagina="">
       <div className="mx-auto grid w-full max-w-[1000px] items-center gap-12 lg:grid-cols-[1.2fr_1fr]">
@@ -36,13 +38,13 @@ export default function H1IniciarSesion() {
               />
               Recordarme en este equipo
             </label>
-            <Boton to="/h1/recuperar-contrasena" variante="terciario">¿Olvidaste tu contraseña?</Boton>
+            <Boton onClick={() => navigate("/h1/recuperar-contrasena")} variante="terciario">¿Olvidaste tu contraseña?</Boton>
           </div>
           <div className="grid">
-            <Boton variante="primario">Ingresar</Boton>
+            <Boton onClick={() => navigate("/h3/mis-tickets")} variante="primario">Ingresar</Boton>
           </div>
           <p className="text-center text-[13px] text-muted">
-            ¿No tienes cuenta? <Boton to="/h1/registro" variante="terciario">Regístrate</Boton>
+            ¿No tienes cuenta? <Boton onClick={() => navigate("/h1/registro")} variante="terciario">Regístrate</Boton>
           </p>
         </Tarjeta>
         <aside className="space-y-4">

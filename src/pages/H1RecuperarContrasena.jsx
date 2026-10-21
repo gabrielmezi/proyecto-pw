@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router";
 import Boton from "../estilo/Boton";
 import Campo from "../estilo/Campo";
 import Tarjeta from "../estilo/Tarjeta";
 import PublicoLayout from "../components/PublicoLayout";
 
 export default function H1RecuperarContrasena() {
+  const navigate = useNavigate();
   return (
     <PublicoLayout pagina="">
       <div className="mx-auto w-full max-w-[680px]">
@@ -34,8 +36,8 @@ export default function H1RecuperarContrasena() {
             ayuda="Si la cuenta existe recibirás el enlace; por seguridad no informamos lo contrario."
           />
           <div data-acciones className="flex flex-wrap items-center gap-3">
-            <Boton variante="primario">Enviar enlace</Boton>
-            <Boton variante="terciario">Volver a iniciar sesión</Boton>
+            <Boton onClick={() => navigate("/h1/enlace-enviado")} variante="primario">Enviar enlace</Boton>
+            <Boton onClick={() => navigate("/h1/iniciar-sesion")} variante="terciario">Volver a iniciar sesión</Boton>
           </div>
         </Tarjeta>
       </div>

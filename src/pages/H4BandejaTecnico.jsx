@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import Tarjeta from "../estilo/Tarjeta";
 import Boton from "../estilo/Boton";
 import Selector from "../estilo/Selector";
@@ -8,6 +9,7 @@ import TituloPagina from "../estilo/TituloPagina";
 import TecnicoLayout from "../components/TecnicoLayout";
 
 export default function H4BandejaTecnico() {
+  const navigate = useNavigate();
   return (
     <TecnicoLayout pagina="bandeja">
       <TituloPagina
@@ -62,7 +64,7 @@ export default function H4BandejaTecnico() {
             </td>
             <td>Vence en 1 h 42 min</td>
             <td>
-              <Boton variante="terciario" to="/h5/detalle-atencion">Abrir bitácora</Boton>
+              <Boton variante="terciario" onClick={() => navigate("/h5/detalle-atencion")} >Abrir bitácora</Boton>
             </td>
           </tr>
           <tr>
@@ -83,7 +85,7 @@ export default function H4BandejaTecnico() {
             </td>
             <td className="text-danger">Vencido hace 1 h 50 min</td>
             <td>
-              <Boton variante="terciario" to="/h5/detalle-atencion">Abrir bitácora</Boton>
+              <Boton variante="terciario" onClick={() => navigate("/h5/detalle-atencion")} >Abrir bitácora</Boton>
             </td>
           </tr>
           <tr>
@@ -104,7 +106,7 @@ export default function H4BandejaTecnico() {
             </td>
             <td>Vence en 6 h 50 min</td>
             <td>
-              <Boton variante="terciario" to="/h5/detalle-atencion">Abrir bitácora</Boton>
+              <Boton variante="terciario" onClick={() => navigate("/h5/detalle-atencion")} >Abrir bitácora</Boton>
             </td>
           </tr>
           <tr>
@@ -125,7 +127,7 @@ export default function H4BandejaTecnico() {
             </td>
             <td>Atendido a tiempo</td>
             <td>
-              <Boton variante="terciario" to="/h5/detalle-atencion">Abrir bitácora</Boton>
+              <Boton variante="terciario" onClick={() => navigate("/h5/detalle-atencion")} >Abrir bitácora</Boton>
             </td>
           </tr>
           <tr>
@@ -146,7 +148,7 @@ export default function H4BandejaTecnico() {
             </td>
             <td>Cerrado el 04/09/2026</td>
             <td>
-              <Boton variante="terciario" to="/h5/detalle-atencion">Abrir bitácora</Boton>
+              <Boton variante="terciario" onClick={() => navigate("/h5/detalle-atencion")} >Abrir bitácora</Boton>
             </td>
           </tr>
           <tr>
@@ -167,7 +169,7 @@ export default function H4BandejaTecnico() {
             </td>
             <td>Espera repuesto · retorno 09/09/2026</td>
             <td>
-              <Boton variante="terciario" to="/h5/detalle-atencion">Abrir bitácora</Boton>
+              <Boton variante="terciario" onClick={() => navigate("/h5/detalle-atencion")} >Abrir bitácora</Boton>
             </td>
           </tr>
           <tr>
@@ -188,7 +190,7 @@ export default function H4BandejaTecnico() {
             </td>
             <td>Vence en 2 h 30 min</td>
             <td>
-              <Boton variante="terciario" to="/h5/detalle-atencion">Abrir bitácora</Boton>
+              <Boton variante="terciario" onClick={() => navigate("/h5/detalle-atencion")} >Abrir bitácora</Boton>
             </td>
           </tr>
           <tr>
@@ -209,7 +211,7 @@ export default function H4BandejaTecnico() {
             </td>
             <td>Espera proveedor · retorno 11/09/2026</td>
             <td>
-              <Boton variante="terciario" to="/h5/detalle-atencion">Abrir bitácora</Boton>
+              <Boton variante="terciario" onClick={() => navigate("/h5/detalle-atencion")} >Abrir bitácora</Boton>
             </td>
           </tr>
         </tbody>

@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import Boton from "../estilo/Boton";
 import Campo from "../estilo/Campo";
 import BuscadorAmbiente from "../estilo/BuscadorAmbiente";
@@ -11,6 +12,7 @@ import TituloPagina from "../estilo/TituloPagina";
 import UsuarioLayout from "../components/UsuarioLayout";
 
 export default function H3NuevoTicket() {
+  const navigate = useNavigate();
   return (
     <UsuarioLayout pagina="nuevo-ticket">
       <TituloPagina
@@ -24,7 +26,7 @@ export default function H3NuevoTicket() {
             registrado hace 18 minutos. Revísalo antes de crear otro.
           </p>
           <div className="ml-auto shrink-0">
-            <Boton variante="heredado">Ver ese ticket</Boton>
+            <Boton onClick={() => navigate("/h3/detalle-ticket")} variante="heredado">Ver ese ticket</Boton>
           </div>
         </div>
       </Aviso>
@@ -52,7 +54,7 @@ export default function H3NuevoTicket() {
                   valor="A-201"
                   ayuda="Aula · Pabellón A · piso 2"
                 />
-                <PrioridadSugerida 
+                <PrioridadSugerida
                   prioridad= "Crítica"
                 />
               </div>
@@ -72,8 +74,8 @@ export default function H3NuevoTicket() {
                 Arrastra una foto o pulsa para elegir · JPG o PNG hasta 5 MB
               </div>
               <div data-acciones className="flex flex-wrap items-center gap-3">
-                <Boton variante="primario">Registrar ticket</Boton>
-                <Boton variante="secundario">Cancelar</Boton>
+                <Boton onClick={() => navigate("/h3/confirmacion")} variante="primario">Registrar ticket</Boton>
+                <Boton onClick={() => navigate("/h3/mis-tickets")} variante="secundario">Cancelar</Boton>
               </div>
             </Tarjeta>
           </div>

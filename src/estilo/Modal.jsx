@@ -1,5 +1,7 @@
+import { useNavigate } from "react-router";
 import Boton from "./Boton";
-export default function Modal({ titulo, children, compacto = false }) {
+export default function Modal({ titulo, children, compacto = false, volverTo = "/" }) {
+  const navigate = useNavigate();
   return (
     <main className="flex min-h-screen items-center justify-center bg-gray-300 p-6">
       <section
@@ -11,7 +13,7 @@ export default function Modal({ titulo, children, compacto = false }) {
       >
         <div className="flex items-start justify-between gap-6">
           <h2 className="text-xl font-semibold">{titulo}</h2>
-          <Boton variante="terciario">
+          <Boton onClick={() => navigate(volverTo)} variante="terciario" aria-label="Cerrar">
             <span>×</span>
           </Boton>
         </div>

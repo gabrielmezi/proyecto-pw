@@ -1,12 +1,7 @@
-import { Link } from "react-router";
-
-export default function BotonNavegacion({ children, activo = false, to, ...props }) {
-  const Componente = to ? Link : "button";
-
+export default function BotonNavegacion({ children, activo = false, ...props }) {
   return (
-    <Componente
-      type={to ? undefined : "button"}
-      to={to}
+    <button
+      type="button"
       {...props}
       data-activo={activo}
       className="hover:bg-gray-200 flex min-h-10 w-full cursor-pointer items-center
@@ -17,6 +12,6 @@ export default function BotonNavegacion({ children, activo = false, to, ...props
       focus-visible:bg-blue-50 focus-visible:text-primary
       data-[activo=true]:focus-visible:bg-blue-50 motion-reduce:transition-none">
       {children}
-    </Componente>
+    </button>
   );
 }

@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import Boton from "../estilo/Boton";
 import Campo from "../estilo/Campo";
 import Aviso from "../estilo/Aviso";
@@ -6,6 +7,7 @@ import TituloPagina from "../estilo/TituloPagina";
 import PublicoLayout from "../components/PublicoLayout";
 
 export default function H1MensajesAcceso() {
+  const navigate = useNavigate();
   return (
     <PublicoLayout pagina="">
       <TituloPagina
@@ -32,7 +34,7 @@ export default function H1MensajesAcceso() {
             ingresar a las 10:42 o restablecer tu contraseña ahora.
           </Aviso>
           <div data-acciones className="flex flex-wrap items-center gap-3">
-            <Boton variante="primario">Restablecer contraseña</Boton>
+            <Boton onClick={() => navigate("/h1/recuperar-contrasena")} variante="primario">Restablecer contraseña</Boton>
             <Boton variante="terciario">Escribir a soporte</Boton>
           </div>
         </Tarjeta>

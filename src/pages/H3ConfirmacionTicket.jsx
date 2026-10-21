@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router";
 import Boton from "../estilo/Boton";
 import Etiqueta from "../estilo/Etiqueta";
 import UsuarioLayout from "../components/UsuarioLayout";
 
 export default function H3ConfirmacionTicket() {
+  const navigate = useNavigate();
   return (
     <UsuarioLayout pagina="mis-tickets">
       <section className="mx-auto max-w-4xl space-y-5 rounded-sm border border-border bg-white px-5 py-8 text-center sm:p-8">
@@ -34,8 +36,8 @@ export default function H3ConfirmacionTicket() {
           </div>
           </div>
           <div className="flex flex-wrap justify-center gap-3 pt-1">
-            <Boton variante="primario">Ver el detalle del ticket</Boton>
-            <Boton variante="secundario">Ir a mis tickets</Boton>
+            <Boton onClick={() => navigate("/h3/detalle-ticket")} variante="primario">Ver el detalle del ticket</Boton>
+            <Boton onClick={() => navigate("/h3/mis-tickets")} variante="secundario">Ir a mis tickets</Boton>
           </div>
       </section>
     </UsuarioLayout>

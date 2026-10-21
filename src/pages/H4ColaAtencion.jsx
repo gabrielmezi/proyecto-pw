@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import FiltroSeleccionado from "../estilo/FiltroSeleccionado";
 import Boton from "../estilo/Boton";
 import Campo from "../estilo/Campo";
@@ -8,6 +9,7 @@ import TituloPagina from "../estilo/TituloPagina";
 import SupervisorLayout from "../components/SupervisorLayout";
 
 export default function H4ColaAtencion() {
+  const navigate = useNavigate();
   return (
     <SupervisorLayout pagina="cola">
       <TituloPagina
@@ -33,7 +35,7 @@ export default function H4ColaAtencion() {
           <option>A-201</option>
           <option>H-210</option>
         </Selector>
-        <Boton variante="terciario" to="/h4/cola">Limpiar filtros</Boton><div className="ml-auto"><Selector titulo="ORDEN">
+        <Boton variante="terciario" onClick={() => navigate("/h4/cola")} >Limpiar filtros</Boton><div className="ml-auto"><Selector titulo="ORDEN">
           <option>Antigüedad</option>
           <option>Prioridad</option>
           <option>Tiempo sin atención</option>
@@ -387,9 +389,9 @@ export default function H4ColaAtencion() {
       </Tabla>
       <div className="mx-auto mt-4 flex w-fit flex-wrap items-center justify-center gap-3 rounded-sm bg-primary-dark p-4 text-[13px] text-white shadow-lg">
         <strong>3 tickets seleccionados</strong>
-        <Boton variante="secundario" to="/h4/asignacion-lote">Asignar a técnico</Boton>
-        <Boton variante="heredado" to="/h4/cambiar-prioridad">Cambiar prioridad</Boton>
-        <Boton variante="heredado" to="/h4/devolver-cola">Devolver a la cola</Boton>
+        <Boton variante="secundario" onClick={() => navigate("/h4/asignacion-lote")} >Asignar a técnico</Boton>
+        <Boton variante="heredado" onClick={() => navigate("/h4/cambiar-prioridad")} >Cambiar prioridad</Boton>
+        <Boton variante="heredado" onClick={() => navigate("/h4/devolver-cola")} >Devolver a la cola</Boton>
         <Boton variante="secundario">Quitar selección</Boton>
       </div>
     </SupervisorLayout>

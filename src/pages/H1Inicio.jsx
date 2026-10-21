@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router";
 import Boton from "../estilo/Boton";
 import Aviso from "../estilo/Aviso";
 import Tarjeta from "../estilo/Tarjeta";
 import PublicoLayout from "../components/PublicoLayout";
 
 export default function H1Inicio() {
+  const navigate = useNavigate();
   return (
     <PublicoLayout pagina="">
       <section className="rounded-sm border border-border bg-white grid gap-10 p-8 lg:grid-cols-[1.5fr_1fr]">
@@ -21,8 +23,8 @@ export default function H1Inicio() {
             mismo día.
           </p>
           <div data-acciones className="flex flex-wrap items-center gap-3">
-            <Boton to="/h3/nuevo-ticket" variante="primario">Registrar un ticket</Boton>
-            <Boton variante="secundario">Ver cómo reportar</Boton>
+            <Boton onClick={() => navigate("/h3/nuevo-ticket")} variante="primario">Registrar un ticket</Boton>
+            <Boton onClick={() => window.location.assign("/#como-reportar")} variante="secundario">Ver cómo reportar</Boton>
           </div>
         </div>
         <div className="bg-[repeating-linear-gradient(45deg,#f4f6f8,#f4f6f8_8px,#eaf0f4_8px,#eaf0f4_16px)] flex min-h-72 items-center justify-center border border-border p-8 text-center font-mono text-[13px] text-muted">
@@ -30,21 +32,21 @@ export default function H1Inicio() {
         </div>
       </section>
       <div className="mt-6 grid gap-4 md:grid-cols-4">
-        <Tarjeta titulo="Qué se reporta">
+        <div id="categorias-servicio"><Tarjeta titulo="Qué se reporta">
           <p>
             Audiovisuales, climatización, redes, mobiliario, eléctrico, limpieza
             y cerraduras.
           </p>
-        </Tarjeta>
-        <Tarjeta titulo="Cómo se prioriza">
+        </Tarjeta></div>
+        <div id="como-reportar"><Tarjeta titulo="Cómo se prioriza">
           <p>
             Crítica, alta, media y baja según el impacto en clases y en la
             seguridad.
           </p>
-        </Tarjeta>
-        <Tarjeta titulo="Tiempo de atención">
+        </Tarjeta></div>
+        <div id="tiempos-atencion"><Tarjeta titulo="Tiempo de atención">
           <p>Crítica 2 h · alta 8 h · media 24 h · baja 72 h hábiles.</p>
-        </Tarjeta>
+        </Tarjeta></div>
         <Aviso tono="info">
           <h3 className="text-base font-semibold">Emergencias</h3>
           <p>

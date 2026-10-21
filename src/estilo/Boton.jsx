@@ -1,6 +1,4 @@
-import { Link } from "react-router";
-
-export default function Boton({ children, variante = "primario", to, ...props }) {
+export default function Boton({ children, variante = "primario", ...props }) {
 
   const clasesBase = `
     inline-flex min-h-10 items-center justify-center gap-2
@@ -19,17 +17,14 @@ export default function Boton({ children, variante = "primario", to, ...props })
     clasesVariante = "border-current bg-transparent px-4 text-inherit hover:bg-gray-200";
   }
 
-  const Componente = to ? Link : "button";
-
   return (
-    <Componente
-      type={to ? undefined : "button"}
-      to={to}
+    <button
+      type="button"
       {...props}
       className={clasesBase + " " + clasesVariante}
       data-variante={variante}
     >
       {children}
-    </Componente>
+    </button>
   );
 }
