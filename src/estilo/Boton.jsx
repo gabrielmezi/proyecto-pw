@@ -14,7 +14,7 @@ export default function Boton({ children, variante = "primario", ...props }) {
   } else if (variante === "peligro") {
     clasesVariante = "border-danger bg-danger px-4 text-white hover:bg-red-800";
   } else if (variante === "heredado") {
-    clasesVariante = "border-current bg-transparent px-4 text-inherit hover:bg-gray-200";
+    clasesVariante = "border-current bg-transparent px-4 text-inherit hover:bg-inherit";
   }
 
   return (

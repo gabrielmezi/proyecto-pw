@@ -21,10 +21,10 @@ export default function H3TicketCerrado() {
             Tienes una encuesta pendiente para este ticket. Puedes responderla hasta el 10/09/2026.
           </div>
           <div className="grid grid-cols-[1.38fr_1fr] gap-2.5">
-            <button type="button" className="enabled:hover:bg-primary-dark rounded-sm border border-primary bg-primary px-3.5 py-2 text-left text-lg font-medium leading-[25px] text-white">
+            <button type="button" className="enabled:hover:bg-primary-dark rounded-sm border border-primary bg-primary px-3.5 py-2 text-left text-lg font-medium leading-[25px] text-white transition">
               Responder<br />encuesta
             </button>
-            <button type="button" onClick={() => navigate("/h3/reabrir-ticket")} className="enabled:hover:bg-gray-200 rounded-sm border border-danger bg-white px-4 py-2 text-left text-lg font-medium leading-[25px] text-danger">
+            <button type="button" onClick={() => navigate("/h3/reabrir-ticket")} className="enabled:hover:bg-red-50 rounded-sm border border-danger bg-white px-4 py-2 text-left text-lg font-medium leading-[25px] text-danger transition">
               Reabrir<br />ticket
             </button>
           </div>

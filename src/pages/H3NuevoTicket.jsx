@@ -25,7 +25,7 @@ export default function H3NuevoTicket() {
             Ya existe un ticket abierto para A-201 en Audiovisuales: TCK-2026-00147,
             registrado hace 18 minutos. Revísalo antes de crear otro.
           </p>
-          <div className="ml-auto shrink-0">
+          <div className="ml-auto shrink-0 hover:bg-amber-100">
             <Boton onClick={() => navigate("/h3/detalle-ticket")} variante="heredado">Ver ese ticket</Boton>
           </div>
         </div>

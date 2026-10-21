@@ -25,6 +25,7 @@ export default function H1Inicio() {
           <div data-acciones className="flex flex-wrap items-center gap-3">
             <Boton onClick={() => navigate("/h3/nuevo-ticket")} variante="primario">Registrar un ticket</Boton>
             <Boton onClick={() => window.location.assign("/#como-reportar")} variante="secundario">Ver cómo reportar</Boton>
+            <Boton onClick={() => navigate("/demostracion")} variante="secundario">Acceso demostración</Boton>
           </div>
         </div>
         <div className="bg-[repeating-linear-gradient(45deg,#f4f6f8,#f4f6f8_8px,#eaf0f4_8px,#eaf0f4_16px)] flex min-h-72 items-center justify-center border border-border p-8 text-center font-mono text-[13px] text-muted">

@@ -1,3 +1,4 @@
+import AccesoDemostracion from "./pages/AccesoDemostracion";
 import { BrowserRouter, Routes, Route } from "react-router";
 import H1Inicio from "./pages/H1Inicio";
 import H1IniciarSesion from "./pages/H1IniciarSesion";
@@ -43,6 +44,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/demostracion" element={<AccesoDemostracion />} />
         <Route path="/" element={<H1Inicio />} />
         <Route path="/h1/inicio" element={<H1Inicio />} />
         <Route path="/h1/iniciar-sesion" element={<H1IniciarSesion />} />
