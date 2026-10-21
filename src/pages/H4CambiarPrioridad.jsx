@@ -27,7 +27,7 @@ export default function H4CambiarPrioridad() {
         El ticket subirá al inicio de la cola y su tiempo esperado pasará de 24
         h a 2 h.
       </Aviso>
-      <div data-acciones className="flex flex-wrap items-center gap-3">
+      <div data-acciones className="flex flex-wrap items-center justify-end gap-3">
         <Boton variante="secundario">Cancelar</Boton>
         <Boton variante="primario">Guardar prioridad</Boton>
       </div>

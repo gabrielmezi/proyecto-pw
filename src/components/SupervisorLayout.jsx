@@ -3,7 +3,7 @@ import BotonNavegacion from "../estilo/BotonNavegacion";
 export default function SupervisorLayout({ children, pagina }) {
   return (
     <div className="flex min-h-screen flex-col" data-pagina={pagina}>
-      <header className="flex min-h-[60px] flex-wrap items-center gap-5 bg-primary-dark px-6 py-3 text-white">
+       <header className="flex min-h-[60px] flex-wrap items-center gap-5 bg-primary px-6 py-3 text-white">
         <strong className="flex w-[188px] items-center gap-3">
           <span className="h-5 w-5 rounded-sm bg-white" />
           Mesa de Ayuda

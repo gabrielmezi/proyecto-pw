@@ -1,10 +1,10 @@
+import Tarjeta from "../estilo/Tarjeta";
 import Boton from "../estilo/Boton";
 import Selector from "../estilo/Selector";
 import Etiqueta from "../estilo/Etiqueta";
 import Aviso from "../estilo/Aviso";
 import Tabla from "../estilo/Tabla";
 import TituloPagina from "../estilo/TituloPagina";
-import Metrica from "../estilo/Metrica";
 import TecnicoLayout from "../components/TecnicoLayout";
 
 export default function H4BandejaTecnico() {
@@ -13,22 +13,21 @@ export default function H4BandejaTecnico() {
       <TituloPagina
         titulo="Mi bandeja"
         descripcion="Julio Paredes Soto · Audiovisuales y Redes · 8 tickets asignados"
-      ></TituloPagina>
-      <div className="mb-6 grid gap-4 sm:grid-cols-4">
-        <Metrica titulo="ABIERTOS" valor="1" detalle="" />
-        <Metrica titulo="EN ATENCIÓN" valor="3" detalle="" />
-        <Metrica titulo="EN ESPERA" valor="2" detalle="" />
-        <Metrica titulo="RESUELTOS" valor="2" detalle="" />
-      </div>
-      <div className="mb-4 flex flex-wrap items-center gap-3">
+      >
+        <Etiqueta tono="info">Abiertos 1</Etiqueta>
+        <Etiqueta tono="warning">En atención 3</Etiqueta>
+        <Etiqueta tono="muted">En espera 2</Etiqueta>
+        <Etiqueta tono="success">Resueltos 2</Etiqueta>
+      </TituloPagina>
+      <div className="mb-4 flex flex-wrap items-end gap-3">
         <Boton variante="primario">Todos (8)</Boton>
         <Boton variante="secundario">Solo críticos (3)</Boton>
         <Boton variante="secundario">Fuera de plazo (1)</Boton>
         <Boton variante="secundario">Hoy</Boton>
-        <Selector titulo="ORDEN">
+        <div className="ml-auto"><Selector titulo="Orden">
           <option>Prioridad y plazo</option>
           <option>Antigüedad</option>
-        </Selector>
+        </Selector></div>
       </div>
       <Tabla prioridades titulo="Listado">
         <thead>
@@ -63,7 +62,7 @@ export default function H4BandejaTecnico() {
             </td>
             <td>Vence en 1 h 42 min</td>
             <td>
-              <Boton variante="terciario">Abrir bitácora</Boton>
+              <Boton variante="terciario" to="/h5/detalle-atencion">Abrir bitácora</Boton>
             </td>
           </tr>
           <tr>
@@ -82,9 +81,9 @@ export default function H4BandejaTecnico() {
             <td>
               <Etiqueta tono="warning">En atención</Etiqueta>
             </td>
-            <td>Vencido hace 1 h 50 min</td>
+            <td className="text-danger">Vencido hace 1 h 50 min</td>
             <td>
-              <Boton variante="terciario">Abrir bitácora</Boton>
+              <Boton variante="terciario" to="/h5/detalle-atencion">Abrir bitácora</Boton>
             </td>
           </tr>
           <tr>
@@ -105,7 +104,7 @@ export default function H4BandejaTecnico() {
             </td>
             <td>Vence en 6 h 50 min</td>
             <td>
-              <Boton variante="terciario">Abrir bitácora</Boton>
+              <Boton variante="terciario" to="/h5/detalle-atencion">Abrir bitácora</Boton>
             </td>
           </tr>
           <tr>
@@ -126,7 +125,7 @@ export default function H4BandejaTecnico() {
             </td>
             <td>Atendido a tiempo</td>
             <td>
-              <Boton variante="terciario">Abrir bitácora</Boton>
+              <Boton variante="terciario" to="/h5/detalle-atencion">Abrir bitácora</Boton>
             </td>
           </tr>
           <tr>
@@ -147,7 +146,7 @@ export default function H4BandejaTecnico() {
             </td>
             <td>Cerrado el 04/09/2026</td>
             <td>
-              <Boton variante="terciario">Abrir bitácora</Boton>
+              <Boton variante="terciario" to="/h5/detalle-atencion">Abrir bitácora</Boton>
             </td>
           </tr>
           <tr>
@@ -168,7 +167,7 @@ export default function H4BandejaTecnico() {
             </td>
             <td>Espera repuesto · retorno 09/09/2026</td>
             <td>
-              <Boton variante="terciario">Abrir bitácora</Boton>
+              <Boton variante="terciario" to="/h5/detalle-atencion">Abrir bitácora</Boton>
             </td>
           </tr>
           <tr>
@@ -189,7 +188,7 @@ export default function H4BandejaTecnico() {
             </td>
             <td>Vence en 2 h 30 min</td>
             <td>
-              <Boton variante="terciario">Abrir bitácora</Boton>
+              <Boton variante="terciario" to="/h5/detalle-atencion">Abrir bitácora</Boton>
             </td>
           </tr>
           <tr>
@@ -210,16 +209,17 @@ export default function H4BandejaTecnico() {
             </td>
             <td>Espera proveedor · retorno 11/09/2026</td>
             <td>
-              <Boton variante="terciario">Abrir bitácora</Boton>
+              <Boton variante="terciario" to="/h5/detalle-atencion">Abrir bitácora</Boton>
             </td>
           </tr>
         </tbody>
       </Tabla>
-      <div className="mt-6">
-        <Aviso tono="warning">
+      <div className="mt-4 grid items-start gap-4 lg:grid-cols-2">
+        <Aviso tono="danger">
           1 ticket fuera del tiempo esperado: TCK-2026-00140 lleva 1 h 50 min de
           retraso. Atiéndelo o cámbialo a En espera con motivo.
         </Aviso>
+        <Tarjeta><p className="text-[13px] text-muted">Estado vacío de la bandeja: «Sin tickets asignados. Cuando el supervisor te asigne uno aparecerá aquí.»</p></Tarjeta>
       </div>
     </TecnicoLayout>
   );

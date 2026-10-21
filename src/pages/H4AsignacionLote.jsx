@@ -16,7 +16,7 @@ export default function H4AsignacionLote() {
         valor="Atención prioritaria de incidencias del campus."
         ayuda=""
       />
-      <div data-acciones className="flex flex-wrap items-center gap-3">
+      <div data-acciones className="flex flex-wrap items-center justify-end gap-3">
         <Boton variante="secundario">Cancelar</Boton>
         <Boton variante="primario">Asignar tickets</Boton>
       </div>
