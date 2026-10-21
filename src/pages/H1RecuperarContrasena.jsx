@@ -7,11 +7,25 @@ export default function H1RecuperarContrasena() {
   return (
     <PublicoLayout pagina="">
       <div className="mx-auto w-full max-w-[680px]">
-        <p className="mb-8 text-primary">
-          ① Tu correo  ② Enlace enviado  ③ Nueva contraseña
-        </p>
-        <Tarjeta titulo="Recuperar mi contraseña">
-          <p>
+        <Tarjeta>
+          <ol className="flex items-center gap-3 text-[13px] text-muted">
+            <li className="flex items-center gap-2 text-primary">
+              <span className="flex h-6 w-6 items-center justify-center rounded-sm bg-primary text-xs text-white">1</span>
+              Tu correo
+            </li>
+            <li className="h-px flex-1 bg-border" />
+            <li className="flex items-center gap-2">
+              <span className="flex h-6 w-6 items-center justify-center rounded-sm border border-border text-xs">2</span>
+              Enlace enviado
+            </li>
+            <li className="h-px flex-1 bg-border" />
+            <li className="flex items-center gap-2">
+              <span className="flex h-6 w-6 items-center justify-center rounded-sm border border-border text-xs">3</span>
+              Nueva contraseña
+            </li>
+          </ol>
+          <h1 className="text-xl font-semibold">Recuperar mi contraseña</h1>
+          <p className="text-[13px] text-muted">
             Te enviaremos un enlace de restablecimiento válido por 30 minutos.
           </p>
           <Campo

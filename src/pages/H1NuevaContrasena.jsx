@@ -6,16 +6,20 @@ import PublicoLayout from "../components/PublicoLayout";
 export default function H1NuevaContrasena() {
   return (
     <PublicoLayout pagina="">
-      <div className="mx-auto w-full max-w-xl">
+      <div className="mx-auto w-full max-w-md">
         <Tarjeta titulo="Nueva contraseña">
-          <Campo
-            titulo="NUEVA CONTRASEÑA"
-            tipo="password"
-            valor="Contrasena1"
-            ayuda="Segura"
-          />
+          <Campo titulo="NUEVA CONTRASEÑA" tipo="password" valor="Contrasena1" />
+          {/* Indicador de fuerza: 2 de 3 segmentos llenos = segura */}
+          <div className="flex items-center gap-2">
+            <span className="h-1 flex-1 rounded-sm bg-success" />
+            <span className="h-1 flex-1 rounded-sm bg-success" />
+            <span className="h-1 flex-1 rounded-sm bg-border" />
+            <span className="text-[13px] text-success">Segura</span>
+          </div>
           <Campo titulo="CONFIRMAR" tipo="password" valor="Contrasena1" />
-          <Boton variante="primario">Guardar contraseña</Boton>
+          <div className="grid">
+            <Boton variante="primario">Guardar contraseña</Boton>
+          </div>
         </Tarjeta>
       </div>
     </PublicoLayout>
