@@ -22,7 +22,8 @@ export default function H5CerrarTicket() {
           valor="3 h 24 min"
           detalle="Dentro del tiempo esperado (8 h)"
         />
-        <Tarjeta titulo="ESTADO FINAL">
+        <Tarjeta>
+          <p className="text-xs text-muted font-bold">ESTADO FINAL</p>
           <Etiqueta tono="success">Cerrado</Etiqueta>
         </Tarjeta>
       </div>
