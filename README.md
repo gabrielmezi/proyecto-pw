@@ -11,7 +11,7 @@ npm run dev
 
 Abre la dirección que imprime Vite (http://localhost:6767) y escribe uno de los caminos siguientes en el navegador. Ejemplo: http://localhost:6767/h3/nuevo-ticket. Cambiar la dirección carga otra pantalla; los controles de las maquetas no navegan ni ejecutan operaciones.
 
-El servidor de desarrollo usa el puerto 6767. Si est? ocupado, Vite muestra un error en lugar de cambiar de puerto, para mantener v?lidos los enlaces de `links.md`.
+El servidor de desarrollo usa el puerto 6767. Vite muestra un error en lugar de cambiar de puerto, para mantener validos los enlaces de `links.md`.
 
 ## Pantallas
 
