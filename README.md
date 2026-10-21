@@ -73,5 +73,3 @@ La tipografía IBM Plex se sirve localmente. La fotografía de inicio se conserv
 ## Verificación
 
 La aplicación incluye 39 direcciones (incluido el inicio) y una vista 404. Sin errores de consola ni desbordamiento horizontal de la página; las tablas anchas tienen desplazamiento propio.
-
-`npm run build` genera dist. La selección por camino requiere que el servidor devuelva index.html para direcciones internas, como ya hace Vite. No se incluye backend ni base de datos.
