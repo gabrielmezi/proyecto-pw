@@ -1,11 +1,13 @@
+import { useNavigate } from "react-router";
 import Boton from "../estilo/Boton";
 import Campo from "../estilo/Campo";
 import AreaTexto from "../estilo/AreaTexto";
 import Modal from "../estilo/Modal";
 
 export default function H5CambiarEstado() {
+  const navigate = useNavigate();
   return (
-    <Modal titulo="Cambiar estado de TCK-2026-00147">
+    <Modal volverTo="/h5/detalle-atencion" titulo="Cambiar estado de TCK-2026-00147">
       <p>
         Estado actual: En atención. Solo se ofrecen las transiciones permitidas.
       </p>
@@ -34,8 +36,8 @@ export default function H5CambiarEstado() {
         />
       </div>
       <div data-acciones className="flex flex-wrap items-center gap-3">
-        <Boton variante="secundario">Cancelar</Boton>
-        <Boton variante="primario">Guardar estado</Boton>
+        <Boton onClick={() => navigate("/h5/detalle-atencion")} variante="secundario">Cancelar</Boton>
+        <Boton onClick={() => navigate("/h5/detalle-atencion")} variante="primario">Guardar estado</Boton>
       </div>
     </Modal>
   );

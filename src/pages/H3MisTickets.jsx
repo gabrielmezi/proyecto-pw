@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import Selector from "../estilo/Selector";
 import TablaTickets from "../components/TablaTickets";
 import FiltroSeleccionado from "../estilo/FiltroSeleccionado";
@@ -5,6 +6,7 @@ import TituloPagina from "../estilo/TituloPagina";
 import UsuarioLayout from "../components/UsuarioLayout";
 
 export default function H3MisTickets() {
+  const navigate = useNavigate();
 
   return (
     <UsuarioLayout pagina="mis-tickets">
@@ -12,7 +14,7 @@ export default function H3MisTickets() {
         titulo="Mis tickets"
         descripcion="12 tickets registrados · 3 en curso"
       >
-        <button type="button" className="enabled:hover:bg-primary-dark inline-flex min-h-10 items-center justify-center rounded-sm bg-primary px-4 py-2 text-[13px] font-medium text-white transition">
+        <button type="button" onClick={() => navigate("/h3/nuevo-ticket")} className="enabled:hover:bg-primary-dark inline-flex min-h-10 items-center justify-center rounded-sm bg-primary px-4 py-2 text-[13px] font-medium text-white transition">
           Registrar un ticket
         </button>
       </TituloPagina>

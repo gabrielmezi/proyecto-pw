@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router";
 import Boton from "../estilo/Boton";
 import Aviso from "../estilo/Aviso";
 import Tarjeta from "../estilo/Tarjeta";
 import UsuarioLayout from "../components/UsuarioLayout";
 
 export default function H3SinTickets() {
+  const navigate = useNavigate();
   return (
     <UsuarioLayout pagina="mis-tickets">
       <div className="w-full max-w-md">
@@ -16,7 +18,7 @@ export default function H3SinTickets() {
               <p className="mb-4 text-lg text-muted">
                 Cuando registres un ticket lo verás aquí con su estado y su prioridad.
               </p>
-              <Boton variante="primario">
+              <Boton onClick={() => navigate("/h3/nuevo-ticket")} variante="primario">
                 Registrar un ticket
               </Boton>
             </div>

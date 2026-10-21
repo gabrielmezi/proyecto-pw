@@ -1,20 +1,24 @@
+import { useNavigate } from "react-router";
 import Boton from "../estilo/Boton";
 import Campo from "../estilo/Campo";
-import Aviso from "../estilo/Aviso";
+import Etiqueta from "../estilo/Etiqueta";
 import Tarjeta from "../estilo/Tarjeta";
-import TituloPagina from "../estilo/TituloPagina";
 import PublicoLayout from "../components/PublicoLayout";
 
 export default function H1Invitacion() {
+  const navigate = useNavigate();
   return (
     <PublicoLayout pagina="">
       <div className="mx-auto w-full max-w-[950px]">
-        <Aviso tono="info">INVITACIÓN VÁLIDA HASTA EL 12/09/2026</Aviso>
-        <TituloPagina
-          titulo="Activa tu cuenta de técnico"
-          descripcion="Lucía Mendoza Ríos te invitó a la Mesa de Ayuda. Revisa tus datos, define tu contraseña y elige tu especialidad."
-        ></TituloPagina>
-        <Tarjeta titulo="Datos de la invitación">
+        <Tarjeta>
+          <Etiqueta tono="accent">INVITACIÓN VÁLIDA HASTA EL 12/09/2026</Etiqueta>
+          <div>
+            <h1 className="text-xl font-semibold">Activa tu cuenta de técnico</h1>
+            <p className="text-[13px] text-muted">
+              Lucía Mendoza Ríos te invitó a la Mesa de Ayuda. Revisa tus datos,
+              define tu contraseña y elige tu especialidad.
+            </p>
+          </div>
           <div className="grid gap-5 sm:grid-cols-2">
             <Campo
               titulo="NOMBRES Y APELLIDOS"
@@ -40,47 +44,40 @@ export default function H1Invitacion() {
           <p className="text-xs text-muted">
             ESPECIALIDAD · ELIGE HASTA TRES CATEGORÍAS
           </p>
-          <div className="grid gap-5 sm:grid-cols-2">
-            <label className="flex items-center gap-2 text-[13px]">
-              <input
-                type="checkbox"
-                defaultChecked
-                className="h-4 w-4 accent-primary"
-              />
-              Audiovisuales
+          {/* Chips: el checkbox queda oculto y has-checked pinta el chip marcado */}
+          <div className="flex flex-wrap gap-2">
+            <label className="cursor-pointer rounded-sm border border-border px-3 py-1 text-[13px] text-muted has-checked:border-primary has-checked:bg-primary-soft has-checked:font-medium has-checked:text-primary">
+              <input type="checkbox" className="sr-only" defaultChecked />
+              Audiovisuales ✓
             </label>
-            <label className="flex items-center gap-2 text-[13px]">
-              <input
-                type="checkbox"
-                defaultChecked
-                className="h-4 w-4 accent-primary"
-              />
-              Redes y conectividad
+            <label className="cursor-pointer rounded-sm border border-border px-3 py-1 text-[13px] text-muted has-checked:border-primary has-checked:bg-primary-soft has-checked:font-medium has-checked:text-primary">
+              <input type="checkbox" className="sr-only" defaultChecked />
+              Redes y conectividad ✓
             </label>
-            <label className="flex items-center gap-2 text-[13px]">
-              <input type="checkbox" className="h-4 w-4 accent-primary" />
+            <label className="cursor-pointer rounded-sm border border-border px-3 py-1 text-[13px] text-muted has-checked:border-primary has-checked:bg-primary-soft has-checked:font-medium has-checked:text-primary">
+              <input type="checkbox" className="sr-only" />
               Climatización
             </label>
-            <label className="flex items-center gap-2 text-[13px]">
-              <input type="checkbox" className="h-4 w-4 accent-primary" />
+            <label className="cursor-pointer rounded-sm border border-border px-3 py-1 text-[13px] text-muted has-checked:border-primary has-checked:bg-primary-soft has-checked:font-medium has-checked:text-primary">
+              <input type="checkbox" className="sr-only" />
               Eléctrico
             </label>
-            <label className="flex items-center gap-2 text-[13px]">
-              <input type="checkbox" className="h-4 w-4 accent-primary" />
+            <label className="cursor-pointer rounded-sm border border-border px-3 py-1 text-[13px] text-muted has-checked:border-primary has-checked:bg-primary-soft has-checked:font-medium has-checked:text-primary">
+              <input type="checkbox" className="sr-only" />
               Mobiliario
             </label>
-            <label className="flex items-center gap-2 text-[13px]">
-              <input type="checkbox" className="h-4 w-4 accent-primary" />
+            <label className="cursor-pointer rounded-sm border border-border px-3 py-1 text-[13px] text-muted has-checked:border-primary has-checked:bg-primary-soft has-checked:font-medium has-checked:text-primary">
+              <input type="checkbox" className="sr-only" />
               Limpieza
             </label>
-            <label className="flex items-center gap-2 text-[13px]">
-              <input type="checkbox" className="h-4 w-4 accent-primary" />
+            <label className="cursor-pointer rounded-sm border border-border px-3 py-1 text-[13px] text-muted has-checked:border-primary has-checked:bg-primary-soft has-checked:font-medium has-checked:text-primary">
+              <input type="checkbox" className="sr-only" />
               Accesos y cerraduras
             </label>
           </div>
           <div data-acciones className="flex flex-wrap items-center gap-3">
-            <Boton variante="primario">Activar mi cuenta</Boton>
-            <Boton variante="secundario">Rechazar invitación</Boton>
+            <Boton onClick={() => navigate("/h1/iniciar-sesion")} variante="primario">Activar mi cuenta</Boton>
+            <Boton onClick={() => navigate("/")} variante="terciario">Rechazar invitación</Boton>
           </div>
         </Tarjeta>
       </div>

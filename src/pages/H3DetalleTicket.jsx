@@ -1,4 +1,4 @@
-﻿import H3BitacoraAtencion from "./H3BitacoraAtencion";
+import H3BitacoraAtencion from "./H3BitacoraAtencion";
 import Boton from "../estilo/Boton";
 import AreaTexto from "../estilo/AreaTexto";
 import Tarjeta from "../estilo/Tarjeta";
@@ -17,7 +17,7 @@ export default function H3DetalleTicket() {
           <Etiqueta tono="danger">Crítica</Etiqueta>
           <Etiqueta tono="warning">En atención</Etiqueta>
           <div className="ml-auto">
-            <Boton variante="secundario">Agregar información</Boton>
+            <Boton onClick={() => window.location.assign("#agregar-informacion")} variante="secundario">Agregar información</Boton>
           </div>
         </div>
         <h2 className="mt-5 text-lg font-semibold">Proyector no enciende en aula A-201</h2>
@@ -27,7 +27,7 @@ export default function H3DetalleTicket() {
         <div className="w-full min-w-0 lg:flex-1">
           <Tarjeta titulo="Bitácora de la atención">
             <H3BitacoraAtencion />
-            <div className="mt-4 border-t border-border pt-4">
+            <div id="agregar-informacion" className="mt-4 border-t border-border pt-4">
               <AreaTexto
                 titulo="AGREGAR INFORMACIÓN"
                 placeholder="Escribe aquí si tienes un dato nuevo que ayude al técnico..."

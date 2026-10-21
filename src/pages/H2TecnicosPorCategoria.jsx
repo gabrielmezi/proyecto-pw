@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router";
 import SupervisorLayout from "../components/SupervisorLayout"
 
 export default function H2TecnicosPorCategoria() {
+  const navigate = useNavigate();
+
   return (
     <SupervisorLayout pagina="tecnicos">
       <div className="max-w-[1200px] mx-auto">
@@ -15,7 +18,7 @@ export default function H2TecnicosPorCategoria() {
               className="text-sm ml-[385px] text-[#3B6FA8] font-bold bg-white rounded-md shadow-md py-2 w-[120px] border border-[#3B6FA8] hover:bg-gray-200 hover:text-black" id="InvitarTécnico" type="button">
               Invitar técnico</button>
             <button
-              className="text-sm ml-4 text-white bg-[#163A5A] rounded-md shadow-md py-2 w-[120px] border border-[#3B6FA8] hover:bg-blue-200 hover:text-black" id="Guardar" type="button">Guardar
+              onClick={() => navigate("/h2/catalogo-vacio")} className="text-sm ml-4 text-white bg-[#163A5A] rounded-md shadow-md py-2 w-[120px] border border-[#3B6FA8] hover:bg-blue-200 hover:text-black" id="Guardar" type="button">Guardar
               matriz</button>
           </div>
         </div>
@@ -62,7 +65,7 @@ export default function H2TecnicosPorCategoria() {
               atención o en espera.</p>
           </div>
         </div>
-      </div>
+      </div> 
     </SupervisorLayout>
   );
 }

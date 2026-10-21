@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router";
 import SupervisorLayout from "../components/SupervisorLayout"
 
 export default function H2Categorias() {
+  const navigate = useNavigate();
   return (
     <SupervisorLayout pagina="categorias">
       <div>
@@ -10,9 +12,9 @@ export default function H2Categorias() {
             ticket nuevo</p>
           <button
             className="text-sm ml-[270px] text-[#3B6FA8] font-bold bg-white rounded-md shadow-md py-2 w-[150px] border border-[#3B6FA8] hover:bg-gray-200 hover:text-black" id="ExportarCatálogo" type="button">Exportar catálogo</button>
-          <button
+          <button type="button" onClick={() => navigate("/h2/editar-categoria")}
             className="text-sm ml-4 text-white bg-[#163A5A] rounded-md shadow-md py-2 w-[150px] border border-[#3B6FA8] hover:bg-blue-200 hover:text-black"
-            id="NuevaCategoría" type="button">Nueva Categoría</button>
+            id="NuevaCategoría">Nueva Categoría</button>
         </div>
 
         <div className="flex items-center mt-4">
@@ -50,8 +52,8 @@ export default function H2Categorias() {
             <p className="ml-[80px]">4 hhábiles</p>
             <p className="ml-[85px]">9</p>
             <p className="ml-[150px] text-[#1E7F4D] bg-green-50 border border-[#1E7F4D] rounded-sm border px-[5px]">Activa</p>
-            <button className="ml-[40px] text-[#163A5A] text-xs font-bold hover:text-blue-500" type="button">Editar</button>
-            <button className="ml-[20px] text-[#B4322B] text-xs font-bold hover:text-red-500" type="button">Desactivar</button>
+            <button type="button" onClick={() => navigate("/h2/editar-categoria")} className="ml-[40px] text-[#163A5A] text-xs font-bold hover:text-blue-500">Editar</button>
+            <button type="button" onClick={() => navigate("/h2/desactivar-categoria")} className="ml-[20px] text-[#B4322B] text-xs font-bold hover:text-red-500">Desactivar</button>
           </div>
 
           <div className="mt-4 flex items-center">
@@ -60,8 +62,8 @@ export default function H2Categorias() {
             <p className="ml-[65px]">2 hhábiles</p>
             <p className="ml-[85px]">3</p>
             <p className="ml-[150px] text-[#1E7F4D] bg-green-50 border border-[#1E7F4D] rounded-sm border px-[5px]">Activa</p>
-            <button className="ml-[40px] text-[#163A5A] text-xs font-bold hover:text-blue-500" type="button">Editar</button>
-            <button className="ml-[20px] text-[#B4322B] text-xs font-bold hover:text-red-500" type="button">Desactivar</button>
+            <button type="button" onClick={() => navigate("/h2/editar-categoria")} className="ml-[40px] text-[#163A5A] text-xs font-bold hover:text-blue-500">Editar</button>
+            <button type="button" onClick={() => navigate("/h2/desactivar-categoria")} className="ml-[20px] text-[#B4322B] text-xs font-bold hover:text-red-500">Desactivar</button>
           </div>
         </div>
 

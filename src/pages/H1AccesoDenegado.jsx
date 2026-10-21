@@ -1,23 +1,25 @@
+import { useNavigate } from "react-router";
 import Boton from "../estilo/Boton";
-import TituloPagina from "../estilo/TituloPagina";
 import UsuarioLayout from "../components/UsuarioLayout";
 
 export default function H1AccesoDenegado() {
+  const navigate = useNavigate();
   return (
-    <UsuarioLayout pagina="">
-      <div className="mx-auto max-w-2xl py-24 text-center">
-        <p className="mb-6 text-7xl font-semibold text-primary">403</p>
-        <TituloPagina
-          titulo="No tienes permiso para ver la cola de atención"
-          descripcion=""
-        ></TituloPagina>
-        <p className="mb-8 text-muted">
+    <UsuarioLayout pagina="inicio">
+      <div className="mx-auto mt-24 max-w-2xl rounded-sm border border-border bg-white p-10 text-center">
+        <span className="inline-flex h-10 w-12 items-center justify-center rounded-sm border border-danger bg-red-50 font-semibold text-danger">
+          403
+        </span>
+        <h1 className="mt-4 text-xl font-semibold">
+          No tienes permiso para ver la cola de atención
+        </h1>
+        <p className="mt-2 text-[13px] text-muted">
           Tu cuenta tiene el rol de usuario. La cola, la asignación y el
           catálogo de servicios son exclusivos del supervisor. Si necesitas ese
           acceso, solicítalo a Infraestructura y Servicios.
         </p>
-        <div data-acciones className="flex flex-wrap items-center gap-3">
-          <Boton variante="primario">Ir a mis tickets</Boton>
+        <div data-acciones className="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <Boton onClick={() => navigate("/h3/mis-tickets")} variante="primario">Ir a mis tickets</Boton>
           <Boton variante="secundario">Solicitar acceso</Boton>
         </div>
       </div>

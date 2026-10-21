@@ -1,5 +1,7 @@
+import { useNavigate } from "react-router";
 
 export default function H2NuevoAmbiente() {
+  const navigate = useNavigate();
   return (
     <div className="flex items-center ml-[550px] mt-[200px] bg-[#F4F6F8]">
       <div>
@@ -28,9 +30,9 @@ export default function H2NuevoAmbiente() {
         </div>
 
         <div className="flex bg-white border-l border-r border-b border-md border-[#D6DEE5] shadow-md p-2 rounded-sm">
-          <button 
-          className="ml-[180px] font-bold text-[#22537D] border border-[#22537D] rounded-md px-3 py-[5px] hover:text-[#1A4264] hover:bg-[#F0F4F8] hover:border-[#1A4264]" id="Cancelar" type="button">Cancelar</button>
-          <button className="ml-2 text-white bg-[#22537D] border border-[#22537D] rounded-md px-3 py-[5px] hover:text-white hover:bg-[#1A4264] hover:border-[#1A4264]" id="GuardarAmbiente" type="button">Guardar ambiente</button>
+          <button type="button" onClick={() => navigate("/h2/ambientes")}
+          className="ml-[150px] font-bold text-[#22537D] border border-[#22537D] rounded-md px-3 py-[5px] hover:text-[#1A4264] hover:bg-[#F0F4F8] hover:border-[#1A4264]" id="Cancelar">Cancelar</button>
+          <button type="button" onClick={() => navigate("/h2/ambientes")} className="ml-2 text-white bg-[#22537D] border border-[#22537D] rounded-md px-3 py-[5px] hover:text-white hover:bg-[#1A4264] hover:border-[#1A4264]" id="GuardarAmbiente">Guardar ambiente</button>
 
         </div>
       </div>

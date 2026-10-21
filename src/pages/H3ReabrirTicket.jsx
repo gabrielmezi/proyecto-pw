@@ -1,10 +1,12 @@
-﻿import Boton from "../estilo/Boton";
+import { useNavigate } from "react-router";
+import Boton from "../estilo/Boton";
 import Modal from "../estilo/Modal";
 import AreaTexto from "../estilo/AreaTexto";
 
 export default function H3ReabrirTicket() {
+  const navigate = useNavigate();
   return (
-    <Modal titulo="Reabrir TCK-2026-00131" compacto>
+    <Modal volverTo="/h3/ticket-cerrado" titulo="Reabrir TCK-2026-00131" compacto>
       <p className="text-lg text-muted">
         Se admite reabrir hasta 7 días después del cierre. Plazo vigente hasta el 10/09/2026.
       </p>
@@ -15,8 +17,8 @@ export default function H3ReabrirTicket() {
         obligatorio
       />
       <div className="flex flex-wrap justify-end gap-3">
-        <Boton variante="secundario">Cancelar</Boton>
-        <Boton variante="peligro">Reabrir ticket</Boton>
+        <Boton onClick={() => navigate("/h3/ticket-cerrado")} variante="secundario">Cancelar</Boton>
+        <Boton onClick={() => navigate("/h3/detalle-ticket")} variante="peligro">Reabrir ticket</Boton>
       </div>
     </Modal>
   );

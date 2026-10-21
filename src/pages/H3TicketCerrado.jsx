@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router";
 import UsuarioLayout from "../components/UsuarioLayout";
 
 export default function H3TicketCerrado() {
+  const navigate = useNavigate();
   return (
     <UsuarioLayout pagina="mis-tickets">
       <section className="min-h-[502px] w-full max-w-[380px] border border-border bg-white p-5">
@@ -22,7 +24,7 @@ export default function H3TicketCerrado() {
             <button type="button" className="enabled:hover:bg-primary-dark rounded-sm border border-primary bg-primary px-3.5 py-2 text-left text-lg font-medium leading-[25px] text-white">
               Responder<br />encuesta
             </button>
-            <button type="button" className="enabled:hover:bg-gray-200 rounded-sm border border-danger bg-white px-4 py-2 text-left text-lg font-medium leading-[25px] text-danger">
+            <button type="button" onClick={() => navigate("/h3/reabrir-ticket")} className="enabled:hover:bg-gray-200 rounded-sm border border-danger bg-white px-4 py-2 text-left text-lg font-medium leading-[25px] text-danger">
               Reabrir<br />ticket
             </button>
           </div>

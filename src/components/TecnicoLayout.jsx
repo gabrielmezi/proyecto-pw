@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router";
 import BotonNavegacion from "../estilo/BotonNavegacion";
 
 export default function TecnicoLayout({ children, pagina }) {
+  const navigate = useNavigate();
   return (
     <div className="flex min-h-screen flex-col" data-pagina={pagina}>
       <header className="flex min-h-[60px] flex-wrap items-center gap-5 bg-primary px-6 py-3 text-white">
@@ -29,10 +31,10 @@ export default function TecnicoLayout({ children, pagina }) {
           <nav
             className="grid grid-cols-2 md:block"
           >
-            <BotonNavegacion activo={pagina === "bandeja"}>
+            <BotonNavegacion onClick={() => navigate("/h4/bandeja-tecnico")} activo={pagina === "bandeja"}>
               Mi bandeja<span className="rounded-sm border border-border bg-background px-1 text-[11px]">8</span>
             </BotonNavegacion>
-            <BotonNavegacion activo={pagina === "atencion"}>
+            <BotonNavegacion onClick={() => navigate("/h5/detalle-atencion")} activo={pagina === "atencion"}>
               En atención<span className="rounded-sm border border-border bg-background px-1 text-[11px]">3</span>
             </BotonNavegacion>
             <BotonNavegacion activo={pagina === "espera"}>
@@ -41,18 +43,18 @@ export default function TecnicoLayout({ children, pagina }) {
             <BotonNavegacion activo={pagina === "resueltos"}>
               Resueltos hoy<span className="rounded-sm border border-border bg-background px-1 text-[11px]">2</span>
             </BotonNavegacion>
-            <BotonNavegacion activo={pagina === "historial"}>
+            <BotonNavegacion onClick={() => navigate("/h5/historial")} activo={pagina === "historial"}>
               Historial
             </BotonNavegacion>
-            <BotonNavegacion activo={pagina === "cuenta"}>
+            <BotonNavegacion onClick={() => navigate("/h1/mi-cuenta")} activo={pagina === "cuenta"}>
               Mi cuenta
             </BotonNavegacion>
           </nav>
           <div className="mt-auto border-t border-border pt-2">
-            <BotonNavegacion>
+            <BotonNavegacion onClick={() => navigate("/h1/mi-cuenta")} >
               Mi cuenta
             </BotonNavegacion>
-            <BotonNavegacion>
+            <BotonNavegacion onClick={() => navigate("/h1/iniciar-sesion")} >
               Cerrar sesión
             </BotonNavegacion>
           </div>

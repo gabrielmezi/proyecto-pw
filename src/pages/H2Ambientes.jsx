@@ -1,14 +1,16 @@
+import { useNavigate } from "react-router";
 import SupervisorLayout from "../components/SupervisorLayout"
 
 export default function H2Ambientes() {
+  const navigate = useNavigate();
     return (
         <SupervisorLayout pagina="ambientes">
             <div>
                 <p className="text-2xl font-bold">Sedes y ambientes</p>
                 <div className="flex items-center">
                     <p className="text-sm text-gray-500">48 ambientes registrados en el Campus Monterrico</p>
-                    <button
-                        className="text-sm  ml-[630px] text-white bg-[#163A5A] rounded-md shadow-md py-2 w-[150px] border border-[#3B6FA8] hover:bg-blue-200 hover:text-black" id="NuevoAmbiente" type="button">Nuevo ambiente</button>
+                    <button type="button" onClick={() => navigate("/h2/nuevo-ambiente")}
+                        className="text-sm  ml-[630px] text-white bg-[#163A5A] rounded-md shadow-md py-2 w-[150px] border border-[#3B6FA8] hover:bg-blue-200 hover:text-black" id="NuevoAmbiente">Nuevo ambiente</button>
                 </div>
 
                 <div className="mt-2 flex items-center">

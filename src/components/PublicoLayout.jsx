@@ -1,5 +1,7 @@
+import { useNavigate } from "react-router";
 import Boton from "../estilo/Boton";
 export default function PublicoLayout({ children }) {
+  const navigate = useNavigate();
   return (
     <div className="flex min-h-screen flex-col">
       <header className="border-b border-border bg-white">
@@ -12,14 +14,14 @@ export default function PublicoLayout({ children }) {
           <nav
             className="flex flex-wrap gap-5 text-[13px]"
           >
-            <button className="enabled:hover:bg-gray-200" type="button">Inicio</button>
-            <button className="enabled:hover:bg-gray-200" type="button">Cómo reportar</button>
-            <button className="enabled:hover:bg-gray-200" type="button">Categorías de servicio</button>
-            <button className="enabled:hover:bg-gray-200" type="button">Tiempos de atención</button>
+            <button type="button" className="hover:bg-gray-200" onClick={() => navigate("/")} >Inicio</button>
+            <button type="button" className="hover:bg-gray-200" onClick={() => window.location.assign("/#como-reportar")}>Cómo reportar</button>
+            <button type="button" className="hover:bg-gray-200" onClick={() => window.location.assign("/#categorias-servicio")}>Categorías de servicio</button>
+            <button type="button" className="hover:bg-gray-200" onClick={() => window.location.assign("/#tiempos-atencion")}>Tiempos de atención</button>
           </nav>
           <div data-acciones className="flex flex-wrap items-center gap-3 ml-auto">
-            <Boton variante="secundario">Iniciar sesión</Boton>
-            <Boton variante="primario">Registrarme</Boton>
+            <Boton onClick={() => navigate("/h1/iniciar-sesion")} variante="secundario">Iniciar sesión</Boton>
+            <Boton onClick={() => navigate("/h1/registro")} variante="primario">Registrarme</Boton>
           </div>
         </div>
       </header>

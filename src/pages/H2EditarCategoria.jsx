@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router";
 import SupervisorLayout from "../components/SupervisorLayout"
 
 export default function H2EditarCategoria() {
+  const navigate = useNavigate();
   return (
     <SupervisorLayout pagina="categorias">
       <div className="flex items-center">
@@ -61,12 +63,12 @@ export default function H2EditarCategoria() {
               <input className="border border-gray-500 rounded-sm w-[15px] h-[15px]" id="CategoríaActiva" type="checkbox" />
               <p className="ml-2 text-xs">Categoría activa · disponible al registrar tickets</p>
             </div>
-            <button
+            <button type="button" onClick={() => navigate("/h2/categorias")}
               className="mt-4 text-sm text-white bg-[#163A5A] rounded-md shadow-md py-2 w-[150px] border border-[#3B6FA8] hover:bg-blue-200 hover:text-black"
-              id="GuardarCategoría" type="button">Guardar Categoría</button>
-            <button
+              id="GuardarCategoría">Guardar Categoría</button>
+            <button type="button" onClick={() => navigate("/h2/categorias")}
               className="text-sm ml-2 text-[#3B6FA8] font-bold bg-white rounded-md shadow-md py-2 w-[100px] border border-[#3B6FA8] hover:bg-gray-200 hover:text-black"
-              id="Cancelar" type="button">Cancelar</button>
+              id="Cancelar">Cancelar</button>
           </div>
         </div>
 

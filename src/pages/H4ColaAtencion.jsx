@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router";
+import FiltroSeleccionado from "../estilo/FiltroSeleccionado";
 import Boton from "../estilo/Boton";
 import Campo from "../estilo/Campo";
 import Selector from "../estilo/Selector";
@@ -7,21 +9,22 @@ import TituloPagina from "../estilo/TituloPagina";
 import SupervisorLayout from "../components/SupervisorLayout";
 
 export default function H4ColaAtencion() {
+  const navigate = useNavigate();
   return (
     <SupervisorLayout pagina="cola">
       <TituloPagina
         titulo="Cola de atención"
         descripcion="24 tickets en cola · 9 sin asignar · 3 fuera del tiempo esperado"
       >
-        <Etiqueta tono="info">Abierto</Etiqueta> 9{" "}
-        <Etiqueta tono="warning">En atención</Etiqueta> 8{" "}
-        <Etiqueta tono="muted">En espera</Etiqueta> 3{" "}
-        <Etiqueta tono="success">Resuelto</Etiqueta> 4
+        <Etiqueta tono="info">Abiertos 9</Etiqueta>
+        <Etiqueta tono="warning">En atención 8</Etiqueta>
+        <Etiqueta tono="muted">En espera 3</Etiqueta>
+        <Etiqueta tono="success">Resueltos hoy 4</Etiqueta>
       </TituloPagina>
-      <div className="mb-4 flex flex-wrap items-center gap-3">
-        <Campo titulo="BUSCAR CÓDIGO O ASUNTO" valor="" ayuda="" />
-        <Boton variante="secundario">Prioridad: crítica, alta ×</Boton>
-        <Boton variante="secundario">Estado: abierto, en atención ×</Boton>
+      <div className="mb-4 flex flex-wrap items-end gap-3">
+        <Campo titulo="BUSCAR CÓDIGO O ASUNTO" valor="" placeholder="Buscar código o asunto" ayuda="" />
+        <FiltroSeleccionado>Prioridad: crítica, alta</FiltroSeleccionado>
+        <FiltroSeleccionado>Estado: abierto, en atención</FiltroSeleccionado>
         <Selector titulo="CATEGORÍA">
           <option>Todas</option>
           <option>Audiovisuales</option>
@@ -32,16 +35,16 @@ export default function H4ColaAtencion() {
           <option>A-201</option>
           <option>H-210</option>
         </Selector>
-        <Selector titulo="ORDEN">
+        <Boton variante="terciario" onClick={() => navigate("/h4/cola")} >Limpiar filtros</Boton><div className="ml-auto"><Selector titulo="ORDEN">
           <option>Antigüedad</option>
           <option>Prioridad</option>
           <option>Tiempo sin atención</option>
-        </Selector>
+        </Selector></div>
       </div>
       <Tabla prioridades titulo="Listado">
         <thead>
           <tr>
-            <th scope="col"></th>
+            <th scope="col"><input type="checkbox" aria-label="Seleccionar todos los tickets" className="accent-primary" /></th>
             <th scope="col">CÓDIGO</th>
             <th scope="col">ASUNTO</th>
             <th scope="col">CATEGORÍA</th>
@@ -384,11 +387,11 @@ export default function H4ColaAtencion() {
           </tr>
         </tbody>
       </Tabla>
-      <div className="mx-auto mt-4 flex w-fit flex-wrap items-center gap-4 rounded-sm bg-primary-dark p-4 text-white shadow-lg">
+      <div className="mx-auto mt-4 flex w-fit flex-wrap items-center justify-center gap-3 rounded-sm bg-primary-dark p-4 text-[13px] text-white shadow-lg">
         <strong>3 tickets seleccionados</strong>
-        <Boton variante="secundario">Asignar a técnico</Boton>
-        <Boton variante="primario">Cambiar prioridad</Boton>
-        <Boton variante="primario">Devolver a la cola</Boton>
+        <Boton variante="secundario" onClick={() => navigate("/h4/asignacion-lote")} >Asignar a técnico</Boton>
+        <Boton variante="heredado" onClick={() => navigate("/h4/cambiar-prioridad")} >Cambiar prioridad</Boton>
+        <Boton variante="heredado" onClick={() => navigate("/h4/devolver-cola")} >Devolver a la cola</Boton>
         <Boton variante="secundario">Quitar selección</Boton>
       </div>
     </SupervisorLayout>
