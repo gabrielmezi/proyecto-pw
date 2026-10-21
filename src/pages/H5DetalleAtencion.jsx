@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router";
 import Boton from "../estilo/Boton";
 import AreaTexto from "../estilo/AreaTexto";
 import Etiqueta from "../estilo/Etiqueta";
@@ -7,7 +6,6 @@ import Tarjeta from "../estilo/Tarjeta";
 import TecnicoLayout from "../components/TecnicoLayout";
 
 export default function H5DetalleAtencion() {
-  const navigate = useNavigate();
   return (
     <TecnicoLayout pagina="bandeja">
       <div className="mb-6 flex flex-wrap items-start justify-between gap-4">

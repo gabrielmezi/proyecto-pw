@@ -1,3 +1,4 @@
+import H3TicketGuardado from "./pages/H3TicketGuardado";
 import AccesoDemostracion from "./pages/AccesoDemostracion";
 import { BrowserRouter, Routes, Route } from "react-router";
 import H1Inicio from "./pages/H1Inicio";
@@ -65,6 +66,8 @@ export default function App() {
         <Route path="/h2/desactivar-categoria" element={<H2DesactivarCategoria />} />
         <Route path="/h2/catalogo-vacio" element={<H2CatalogoVacio />} />
         <Route path="/h3/nuevo-ticket" element={<H3NuevoTicket />} />
+        <Route path="/h3/confirmacion/:id" element={<H3TicketGuardado confirmacion />} />
+        <Route path="/h3/detalle-ticket/:id" element={<H3TicketGuardado />} />
         <Route path="/h3/confirmacion" element={<H3ConfirmacionTicket />} />
         <Route path="/h3/mis-tickets" element={<H3MisTickets />} />
         <Route path="/h3/detalle-ticket" element={<H3DetalleTicket />} />

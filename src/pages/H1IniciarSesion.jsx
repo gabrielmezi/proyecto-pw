@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { useDatos } from "../context/DatosContext";
 import { useNavigate } from "react-router";
 import Boton from "../estilo/Boton";
 import Campo from "../estilo/Campo";
@@ -7,41 +9,58 @@ import PublicoLayout from "../components/PublicoLayout";
 
 export default function H1IniciarSesion() {
   const navigate = useNavigate();
+
+  const { usuario } = useDatos();
+
+  // ESTADO LOCAL: el correo escrito no modifica el perfil guardado.
+  const [correo, setCorreo] = useState(usuario.correo);
+  const [mensaje, setMensaje] = useState("");
+
+  // DEMOSTRACIÓN: se pide una contraseña, pero no se compara ni se guarda.
+  const [contrasena, setContrasena] = useState("");
+
+  function ingresar() {
+    if (!contrasena) {
+      setMensaje("Ingresa una contraseña para continuar.");
+      return;
+    }
+
+    if (correo.trim().toLowerCase() !== usuario.correo) {
+      setMensaje("Usa el correo del perfil guardado o registra un perfil nuevo.");
+      return;
+    }
+
+    navigate("/h3/mis-tickets");
+  }
+
   return (
     <PublicoLayout pagina="">
       <div className="mx-auto grid w-full max-w-[1000px] items-center gap-12 lg:grid-cols-[1.2fr_1fr]">
         <Tarjeta titulo="Iniciar sesión">
-          <p className="text-[13px] text-muted">Ingresa con tu correo institucional.</p>
+          <p className="text-[13px] text-muted">Acceso de demostración al perfil de este navegador.</p>
           <Campo
             titulo="CORREO INSTITUCIONAL"
-            valor="camila.quispe@aloe.ulima.edu.pe"
+            tipo="email"
+            value={correo}
+            onChange={(event) => setCorreo(event.target.value)}
             ayuda=""
           />
-          {/* Contraseña con el botón Mostrar dentro del mismo borde */}
-          <label className="flex min-w-0 flex-col gap-2 text-[12px] text-muted">
-            <span>CONTRASEÑA</span>
-            <span className="flex min-h-10 items-center rounded-sm border border-border bg-white pr-2">
-              <input
-                className="min-w-0 flex-1 rounded-sm px-3 py-2 text-[15px] text-ink"
-                type="password"
-                defaultValue="Contrasena1"
-              />
-              <Boton variante="terciario">Mostrar</Boton>
-            </span>
-          </label>
-          <div data-acciones className="flex flex-wrap items-center justify-between gap-3">
-            <label className="flex items-center gap-2 text-[13px]">
-              <input
-                type="checkbox"
-                defaultChecked
-                className="h-4 w-4 accent-primary"
-              />
-              Recordarme en este equipo
-            </label>
+          <Campo
+            titulo="CONTRASEÑA"
+            tipo="password"
+            name="contrasena"
+            autoComplete="current-password"
+            value={contrasena}
+            onChange={(event) => setContrasena(event.target.value)}
+          />
+
+          <div data-acciones className="flex flex-wrap items-center gap-3">
             <Boton onClick={() => navigate("/h1/recuperar-contrasena")} variante="terciario">¿Olvidaste tu contraseña?</Boton>
           </div>
+          {mensaje && <p role="alert">{mensaje}</p>}
+
           <div className="grid">
-            <Boton onClick={() => navigate("/h3/mis-tickets")} variante="primario">Ingresar</Boton>
+            <Boton onClick={ingresar} variante="primario">Ingresar</Boton>
           </div>
           <p className="text-center text-[13px] text-muted">
             ¿No tienes cuenta? <Boton onClick={() => navigate("/h1/registro")} variante="terciario">Regístrate</Boton>
@@ -55,7 +74,7 @@ export default function H1IniciarSesion() {
             definen su contraseña al aceptarla.
           </p>
           <Aviso tono="info">
-            Tras cinco intentos fallidos la cuenta se bloquea por 15 minutos.
+            Este acceso usa un perfil local de demostración; no valida contraseñas.
           </Aviso>
         </aside>
       </div>

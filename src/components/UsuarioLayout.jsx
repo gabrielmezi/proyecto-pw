@@ -1,8 +1,12 @@
+import { useDatos } from "../context/DatosContext";
 import { useNavigate } from "react-router";
 import BotonNavegacion from "../estilo/BotonNavegacion";
 
 export default function UsuarioLayout({ children, pagina }) {
   const navigate = useNavigate();
+
+  const { usuario, misTickets } = useDatos();
+
   return (
     <div className="flex min-h-screen flex-col" data-pagina={pagina}>
       <header className="flex min-h-[60px] flex-wrap items-center gap-5 bg-primary px-6 py-3 text-white">
@@ -15,13 +19,13 @@ export default function UsuarioLayout({ children, pagina }) {
           placeholder="⌕ Buscar por código de ticket · TCK-2026-…"
         />
         <span className="ml-auto rounded-sm bg-white/10 px-3 py-1 text-[11px]">
-          MIS TICKETS ABIERTOS · 3
+          MIS TICKETS ABIERTOS · {misTickets.filter((ticket) => ticket.estado === "Abierto").length}
         </span>
         <div className="text-right text-xs">
-          Camila Quispe Ramos
+          {usuario.nombres} {usuario.apellidos}
           <p className="text-[10px]">USUARIO</p>
         </div>
-        <span className="rounded-sm bg-accent p-2 text-xs">CQ</span>
+        <span className="rounded-sm bg-accent p-2 text-xs">{usuario.nombres[0]}{usuario.apellidos[0]}</span>
       </header>
       <div className="flex flex-1 flex-col md:flex-row">
         <aside className="flex shrink-0 flex-col border-r border-border bg-white p-3 md:w-[236px]">
@@ -38,7 +42,7 @@ export default function UsuarioLayout({ children, pagina }) {
               Nuevo ticket
             </BotonNavegacion>
             <BotonNavegacion onClick={() => navigate("/h3/mis-tickets")} activo={pagina === "mis-tickets"}>
-              Mis tickets<span className="rounded-sm border border-border bg-background px-1 text-[11px]">12</span>
+              Mis tickets<span className="rounded-sm border border-border bg-background px-1 text-[11px]">{misTickets.length}</span>
             </BotonNavegacion>
             <BotonNavegacion activo={pagina === "encuesta"}>
               Encuesta pendiente<span className="rounded-sm border border-border bg-background px-1 text-[11px]">1</span>

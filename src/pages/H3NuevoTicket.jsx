@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { useDatos } from "../context/DatosContext";
 import { useNavigate } from "react-router";
 import Boton from "../estilo/Boton";
 import Campo from "../estilo/Campo";
@@ -5,7 +7,6 @@ import BuscadorAmbiente from "../estilo/BuscadorAmbiente";
 import Selector from "../estilo/Selector";
 import PrioridadSugerida from "../estilo/PrioridadSugerida";
 import AreaTexto from "../estilo/AreaTexto";
-import Aviso from "../estilo/Aviso";
 import NotaInformativa from "../estilo/NotaInformativa";
 import Tarjeta from "../estilo/Tarjeta";
 import TituloPagina from "../estilo/TituloPagina";
@@ -13,29 +14,50 @@ import UsuarioLayout from "../components/UsuarioLayout";
 
 export default function H3NuevoTicket() {
   const navigate = useNavigate();
+
+  const { usuario, crearTicket } = useDatos();
+
+  // ESTADO LOCAL: borrador del formulario, todavía no persistido.
+  const [datos, setDatos] = useState({
+    asunto: "",
+    descripcion: "",
+    categoria: "Audiovisuales",
+    subcategoria: "Proyector no enciende",
+    ambiente: usuario.ambiente,
+  });
+
+  const [mensaje, setMensaje] = useState("");
+
+  function cambiarCampo(event) {
+    const { name, value } = event.target;
+    setDatos((anterior) => ({ ...anterior, [name]: value }));
+  }
+
+  // GUARDAR Y NAVEGAR: el ID del ticket queda en la URL.
+  function registrarTicket() {
+    if (!datos.asunto.trim() || !datos.descripcion.trim() || !datos.ambiente.trim()) {
+      setMensaje("Completa el asunto, la descripción y el ambiente.");
+      return;
+    }
+
+    const ticket = crearTicket(datos);
+
+    if (ticket) navigate(`/h3/confirmacion/${ticket.id}`);
+  }
+
   return (
     <UsuarioLayout pagina="nuevo-ticket">
       <TituloPagina
         titulo="Registrar un ticket"
         descripcion="Indica qué falla y dónde. La prioridad se sugiere según la categoría y el supervisor puede ajustarla."
       ></TituloPagina>
-      <Aviso tono="warning">
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <p className="min-w-0 flex-1">
-            Ya existe un ticket abierto para A-201 en Audiovisuales: TCK-2026-00147,
-            registrado hace 18 minutos. Revísalo antes de crear otro.
-          </p>
-          <div className="ml-auto shrink-0 hover:bg-amber-100">
-            <Boton onClick={() => navigate("/h3/detalle-ticket")} variante="heredado">Ver ese ticket</Boton>
-          </div>
-        </div>
-      </Aviso>
+
       <div className="mt-5">
         <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,2.6fr)_minmax(260px,1fr)]">
           <div className="space-y-6">
             <Tarjeta titulo="Datos del ticket">
               <div className="grid gap-5 sm:grid-cols-2">
-                <Selector titulo="CATEGORÍA" flechaInterior>
+                <Selector name="categoria" value={datos.categoria} onChange={cambiarCampo} titulo="CATEGORÍA" flechaInterior>
                   <option>Audiovisuales</option>
                   <option>Climatización</option>
                   <option>Redes y conectividad</option>
@@ -44,14 +66,15 @@ export default function H3NuevoTicket() {
                   <option>Limpieza</option>
                   <option>Accesos y cerraduras</option>
                 </Selector>
-                <Selector titulo="SUBCATEGORÍA" flechaInterior>
+                <Selector name="subcategoria" value={datos.subcategoria} onChange={cambiarCampo} titulo="SUBCATEGORÍA" flechaInterior>
                   <option>Proyector no enciende</option>
                   <option>Imagen distorsionada</option>
                   <option>Audio sin señal</option>
                   <option>Ecran atascado</option>
                 </Selector>
                 <BuscadorAmbiente
-                  valor="A-201"
+                  value={datos.ambiente}
+                  onChange={(event) => setDatos((anterior) => ({ ...anterior, ambiente: event.target.value }))}
                   ayuda="Aula · Pabellón A · piso 2"
                 />
                 <PrioridadSugerida
@@ -60,21 +83,23 @@ export default function H3NuevoTicket() {
               </div>
               <Campo
                 titulo="ASUNTO"
-                valor="Proyector no enciende en aula A-201"
+                name="asunto" value={datos.asunto} onChange={cambiarCampo}
                 ayuda=""
               />
               <AreaTexto
                 titulo="DESCRIPCIÓN"
-                valor="El proyector enciende el foco pero la imagen no llega a la pantalla. Probé con dos laptops y el mismo cable HDMI de la mesa. Hay clase de 10:00 a 13:00."
+                name="descripcion" value={datos.descripcion} onChange={cambiarCampo} maxLength={600}
                 ayuda="Indica qué probaste y desde cuándo ocurre."
-                contador="178 / 600"
+                contador={`${datos.descripcion.length} / 600`}
               />
               <p className="text-xs text-muted">EVIDENCIA (OPCIONAL)</p>
               <div className="rounded-sm border border-dashed border-border p-6 text-center text-[13px] text-muted">
                 Arrastra una foto o pulsa para elegir · JPG o PNG hasta 5 MB
               </div>
+              {mensaje && <p role="alert">{mensaje}</p>}
+
               <div data-acciones className="flex flex-wrap items-center gap-3">
-                <Boton onClick={() => navigate("/h3/confirmacion")} variante="primario">Registrar ticket</Boton>
+                <Boton onClick={registrarTicket} variante="primario">Registrar ticket</Boton>
                 <Boton onClick={() => navigate("/h3/mis-tickets")} variante="secundario">Cancelar</Boton>
               </div>
             </Tarjeta>

@@ -1,4 +1,4 @@
-export default function Selector({ titulo, children, ayuda, flechaInterior = false }) {
+export default function Selector({ titulo, children, ayuda, flechaInterior = false, ...props }) {
   return (
     <label className="flex min-w-0 flex-col gap-2 text-[12px] text-muted">
       <span>{titulo}</span>
@@ -9,7 +9,7 @@ export default function Selector({ titulo, children, ayuda, flechaInterior = fal
 
         
             <span className="relative block">
-              <select className="min-h-10 w-full rounded-sm border border-border bg-white px-3 py-2 text-[15px] text-ink appearance-none pr-10">{children}</select>
+              <select {...props} className="min-h-10 w-full rounded-sm border border-border bg-white px-3 py-2 text-[15px] text-ink appearance-none pr-10">{children}</select>
               <svg
                 className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink"
                 viewBox="0 0 24 24"
@@ -25,7 +25,7 @@ export default function Selector({ titulo, children, ayuda, flechaInterior = fal
 
 
           : (
-            <select className="min-h-10 w-full rounded-sm border border-border bg-white px-3 py-2 text-[15px] text-ink">{children}</select>
+            <select {...props} className="min-h-10 w-full rounded-sm border border-border bg-white px-3 py-2 text-[15px] text-ink">{children}</select>
           )}
 
 
